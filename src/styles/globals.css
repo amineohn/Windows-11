@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-    @apply bg-center bg-cover overflow-hidden;
+    @apply bg-center bg-cover;
     background-image: url("/static/images/wallpaper.jpg");
 }
