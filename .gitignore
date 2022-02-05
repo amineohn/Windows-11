@@ -35,3 +35,6 @@ yarn-error.log*
 
 # prisma
 /prisma/.env
+
+package-lock.json
+yarn.lock
