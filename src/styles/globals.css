@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-center bg-cover overflow-hidden;
+    background-image: url("/static/images/wallpaper.jpg");
+}
