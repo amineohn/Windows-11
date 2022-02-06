@@ -1,4 +1,5 @@
 import Icons from "@/components/Icons";
+import { Transition } from "@headlessui/react";
 import { useState } from "react";
 import Draggable from "react-draggable";
 
@@ -10,12 +11,19 @@ export default function Home() {
             <div className="flex flex-col justify-between">
                 <main className="flex justify-center min-h-screen items-center w-full h-full">
                     <div className="flex flex-col">
-                        {openWidow && (
+                        <Transition
+                            show={openWidow}
+                            enter="transition-opacity duration-400 ease-in"
+                            enterFrom="opacity-0"
+                            enterTo="opacity-100"
+                            leave="transition-opacity duration-400 ease-out"
+                            leaveFrom="opacity-100"
+                            leaveTo="opacity-0">
                             <Draggable>
                                 <div className="group w-[550px] h-96 bg-white rounded-md">
                                     <div className="bg-white rounded-tl-md rounded-tr-md px-2 py-2 h-10">
                                         <div className="flex items-center justify-between">
-                                            <div>Warning</div>
+                                            <h1>Warning</h1>
                                             <div onClick={() => setOpenWindow(false)}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -26,30 +34,200 @@ export default function Home() {
                                     <div className="px-3 py-3">Not finished yet.</div>
                                 </div>
                             </Draggable>
-                        )}
+                        </Transition>
                     </div>
-                    {startMenu && (
+                    <Transition
+                        show={startMenu}
+                        enter="transition-opacity duration-400 ease-in"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="transition-opacity duration-400 ease-out"
+                        leaveFrom="opacity-100"
+                        className="flex absolute items-center justify-center mt-24 slide-in-bottom"
+                        leaveTo="opacity-0">
                         <>
-                            <div className="flex absolute items-center justify-center mt-24">
-                                <div className="w-[642px] h-[726px] bg-blue-100 rounded-lg shadow-lg">
-                                    <div className="px-10 py-10">
-                                        <div className="space-y-8">
-                                            <div>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Type here to search"
-                                                    className="w-full h-10 px-4 py-4 rounded-[0.250rem] text-gray-900 placeholder-gray-500 border-b-[3px] border-r-2 border-r-gray-100 border-l-2 border-l-gray-100 border-t-2 border-t-gray-100 border-b-[#045dbc] focus:outline-none focus:shadow-outline"
-                                                />
+                            <div className="w-[642px] h-[726px] bg-blue-100 rounded-lg shadow-lg">
+                                <div className="px-10 py-10">
+                                    <div className="space-y-8">
+                                        <div>
+                                            <div className="flex justify-start items-start">
+                                                <div className="ml-2">
+                                                    <Icons icon="searching" className="absolute mt-3 w-4 h-4" />
+                                                </div>
                                             </div>
-                                            <div className="w-[576px] h-[302px]">
-                                                <div className="flex justify-between">
-                                                    <div>
-                                                        <h1 className="text-black/90 font-bold">Pinned</h1>
+                                            <input
+                                                type="text"
+                                                placeholder="Type here to search"
+                                                className="w-full h-10 px-8 py-4 rounded-[0.250rem] text-gray-900 placeholder-gray-500 border-b-[3px] border-r-2 border-r-gray-100 border-l-2 border-l-gray-100 border-t-2 border-t-gray-100 border-b-[#045dbc] focus:outline-none focus:shadow-outline"
+                                            />
+                                        </div>
+                                        <div className="w-[576px] h-[302px]">
+                                            <div className="flex justify-between">
+                                                <div>
+                                                    <h1 className="text-black/90 font-medium">Pinned</h1>
+                                                </div>
+                                                <div>
+                                                    <button className="bg-white px-3 py-1 rounded-lg border-2 border-gray-300">
+                                                        <div className="inline-flex justify-start items-center">
+                                                            <span className="text-black/90 font-medium">All apps</span>
+                                                            <div className="w-[10px] h-[22px] flex justify-center items-center ml-2">
+                                                                <svg className="w-3 h-3" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M0.125977 7.4375C0.125977 7.35286 0.156901 7.27962 0.21875 7.21777L3.43164 4L0.21875 0.782227C0.156901 0.720378 0.125977 0.647135 0.125977 0.5625C0.125977 0.477865 0.156901 0.404622 0.21875 0.342773C0.280599 0.280924 0.353841 0.25 0.438477 0.25C0.523112 0.25 0.596354 0.280924 0.658203 0.342773L4.0957 3.78027C4.15755 3.84212 4.18848 3.91536 4.18848 4C4.18848 4.08464 4.15755 4.15788 4.0957 4.21973L0.658203 7.65723C0.596354 7.71908 0.523112 7.75 0.438477 7.75C0.353841 7.75 0.280599 7.71908 0.21875 7.65723C0.156901 7.59538 0.125977 7.52214 0.125977 7.4375Z"
+                                                                        fill="black"
+                                                                        fill-opacity="0.6063"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className="flex justify-center items-center mt-10">
+                                                <div className="flex items-center justify-center">
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="spotify" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Spotify</span>
+                                                        </div>
                                                     </div>
-                                                    <div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="twitter" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Twitter</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="settings" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Settings</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="mail" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Mail</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="xbox" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Xbox</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="photos" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Photos</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="flex justify-center items-center mt-7">
+                                                <div className="flex items-center justify-center">
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="spotify" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Spotify</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="twitter" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Twitter</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="settings" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Settings</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="mail" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Mail</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="xbox" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Xbox</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="photos" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Photos</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="flex justify-center items-center mt-7">
+                                                <div className="flex items-center justify-center">
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="spotify" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Spotify</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="twitter" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Twitter</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="settings" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Settings</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="mail" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Mail</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="xbox" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Xbox</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-center items-center flex-col space-y-2 mt-2">
+                                                            <Icons icon="photos" className="w-9 h-9" />
+
+                                                            <span className="text-black/90">Photos</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="w-[536px] h-[204px] mt-5">
+                                                <div className="flex justify-between">
+                                                    <h1 className="text-black/90 font-medium">Recommanded</h1>
+                                                    <div className="hidden">
                                                         <button className="bg-white px-3 py-1 rounded-lg border-2 border-gray-300">
                                                             <div className="inline-flex justify-start items-center">
-                                                                <span className="text-black/90 font-medium">All apps</span>
+                                                                <span className="text-black/90 font-medium">More</span>
                                                                 <div className="w-[10px] h-[22px] flex justify-center items-center ml-2">
                                                                     <svg className="w-3 h-3" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <path
@@ -63,211 +241,23 @@ export default function Home() {
                                                         </button>
                                                     </div>
                                                 </div>
-                                                <div className="flex justify-center items-center mt-10">
-                                                    <div className="flex items-center justify-center">
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="spotify" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Spotify</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="twitter" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Twitter</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="settings" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Settings</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="mail" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Mail</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="xbox" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Xbox</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="photos" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Photos</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div className="flex flex-col justify-start items-start p-[2.95rem]">
+                                                    <p className="text-sm text-start">The more you use your device, the more we`ll show you new apps here.</p>
                                                 </div>
-                                                <div className="flex justify-center items-center mt-7">
-                                                    <div className="flex items-center justify-center">
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="spotify" className="w-9 h-9" />
 
-                                                                <span className="text-black/90">Spotify</span>
+                                                <div className="top-0 -ml-10">
+                                                    <div className="w-[642px] h-[62px] border border-t-gray-300 rounded-b-lg">
+                                                        <div className="flex justify-evenly	space-x-60">
+                                                            <div className="w-[163px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                                <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" />
+                                                                <span className="text-black/90 font-medium">Amine</span>
                                                             </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="twitter" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Twitter</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="settings" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Settings</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="mail" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Mail</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="xbox" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Xbox</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="photos" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Photos</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="flex justify-center items-center mt-7">
-                                                    <div className="flex items-center justify-center">
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="spotify" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Spotify</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="twitter" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Twitter</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="settings" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Settings</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="mail" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Mail</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="xbox" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Xbox</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[96px] h-[84px] hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
-                                                            <div className="flex justify-center items-center flex-col space-y-2 mt-2">
-                                                                <Icons icon="photos" className="w-9 h-9" />
-
-                                                                <span className="text-black/90">Photos</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="w-[536px] h-[204px] mt-5">
-                                                    <div className="flex justify-between">
-                                                        <h1 className="text-black/90 font-medium">Recommanded</h1>
-                                                        <div>
-                                                            <button className="bg-white px-3 py-1 rounded-lg border-2 border-gray-300">
-                                                                <div className="inline-flex justify-start items-center">
-                                                                    <span className="text-black/90 font-medium">More</span>
-                                                                    <div className="w-[10px] h-[22px] flex justify-center items-center ml-2">
-                                                                        <svg className="w-3 h-3" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <path
-                                                                                d="M0.125977 7.4375C0.125977 7.35286 0.156901 7.27962 0.21875 7.21777L3.43164 4L0.21875 0.782227C0.156901 0.720378 0.125977 0.647135 0.125977 0.5625C0.125977 0.477865 0.156901 0.404622 0.21875 0.342773C0.280599 0.280924 0.353841 0.25 0.438477 0.25C0.523112 0.25 0.596354 0.280924 0.658203 0.342773L4.0957 3.78027C4.15755 3.84212 4.18848 3.91536 4.18848 4C4.18848 4.08464 4.15755 4.15788 4.0957 4.21973L0.658203 7.65723C0.596354 7.71908 0.523112 7.75 0.438477 7.75C0.353841 7.75 0.280599 7.71908 0.21875 7.65723C0.156901 7.59538 0.125977 7.52214 0.125977 7.4375Z"
-                                                                                fill="black"
-                                                                                fill-opacity="0.6063"
-                                                                            />
-                                                                        </svg>
-                                                                    </div>
+                                                            <div className="flex justify-center items-center">
+                                                                <div className="w-10 h-10 flex justify-center items-center hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                                    <Icons icon="poweroff" className="w-5 h-5" />
                                                                 </div>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="inline-flex space-x-2 justify-center items-center">
-                                                        <div className="w-[268px] h-[56px]">
-                                                            <div className="inline-flex space-x-3 items-center justify-center">
-                                                                <Icons icon="wordfile" className="w-9 h-9" />
-                                                                <div>
-                                                                    <h1 className="text-black/90 font-medium">Syllabus</h1>
-                                                                    <span className="text-gray-600 text-sm">2h ago</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[268px] h-[56px]">
-                                                            <div className="inline-flex space-x-3 items-center justify-center">
-                                                                <Icons icon="wordfile" className="w-9 h-9" />
-                                                                <div>
-                                                                    <h1 className="text-black/90 font-medium">Syllabus</h1>
-                                                                    <span className="text-gray-600 text-sm">2h ago</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="inline-flex space-x-2 justify-center items-center">
-                                                        <div className="w-[268px] h-[56px]">
-                                                            <div className="inline-flex space-x-3 items-center justify-center">
-                                                                <Icons icon="wordfile" className="w-9 h-9" />
-                                                                <div>
-                                                                    <h1 className="text-black/90 font-medium">Syllabus</h1>
-                                                                    <span className="text-gray-600 text-sm">2h ago</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-[268px] h-[56px]">
-                                                            <div className="inline-flex space-x-3 items-center justify-center">
-                                                                <Icons icon="wordfile" className="w-9 h-9" />
-                                                                <div>
-                                                                    <h1 className="text-black/90 font-medium">Syllabus</h1>
-                                                                    <span className="text-gray-600 text-sm">2h ago</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="top-0 -ml-10">
-                                                        <div className="w-[642px] h-[64px] border-4 border-t-gray-800 rounded-b-lg mr-10">
-                                                            <div className="flex justify-between">
-                                                                <div>
-                                                                    <img src="" />
-                                                                    <span>lolol</span>
+                                                                <div className="w-10 h-10 flex justify-center items-center hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                                                                    <Icons icon="setting" className="w-5 h-5" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -279,7 +269,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </>
-                    )}
+                    </Transition>
                 </main>
                 <div className="bg-blue-100/90 backdrop-blur-sm py-1 sticky bottom-0">
                     <div className="flex justify-between items-center space-x-3">
