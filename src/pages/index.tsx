@@ -523,7 +523,7 @@ export default function Home() {
                         <span className="text-white/90 text-md font-medium">Tuner mode</span>
                     </div>
                 </div>
-                <div className="bg-neutral-900/90 backdrop-blur-md py-1 sticky bottom-0">
+                <div className="bg-neutral-900/80 backdrop-blur-lg py-1 sticky bottom-0">
                     <div className="flex justify-between items-center space-x-3">
                         <div className="flex justify-center items-center m-auto space-x-3">
                             {startMenu ? <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(false)} /> : <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(true)} />}
