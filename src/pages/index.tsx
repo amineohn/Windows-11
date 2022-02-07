@@ -1,6 +1,7 @@
 import moment from "moment";
 import { useRouter } from "next/router";
 export default function Home() {
+    moment().locale("fr");
     const date = moment().format("dddd MMMM Do");
     const time = moment().format("HH:mm");
     const router = useRouter();
@@ -15,7 +16,7 @@ export default function Home() {
                             <button
                                 className="bg-neutral-900/70 hover:bg-neutral-900/80 transition-colors text-white px-12 rounded-lg py-3 focus:outline-none focus:shadow-outline"
                                 onClick={() => router.push("/login")}>
-                                Login
+                                Connexion
                             </button>
                         </div>
                     </div>

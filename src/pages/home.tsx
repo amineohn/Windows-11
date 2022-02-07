@@ -246,7 +246,7 @@ export default function Home() {
                                                     </div>
                                                 </div>
                                                 <div className="flex flex-col justify-start items-start p-[2.95rem]">
-                                                    <p className="text-sm text-start text-white">The more you use your device, the more we`ll show you new apps here.</p>
+                                                    <p className="text-sm text-start text-white">Plus vous utilisez votre appareil, plus nous vous montrerons de nouvelles applications ici.</p>
                                                 </div>
 
                                                 <div className="top-0 -ml-10">
@@ -480,7 +480,7 @@ export default function Home() {
                                                     </div>
                                                 </div>
                                                 <div className="flex flex-col justify-start items-start p-[2.95rem]">
-                                                    <p className="text-sm text-start text-white">The more you use your device, the more we`ll show you new apps here.</p>
+                                                    <p className="text-sm text-start text-white">Plus vous utilisez votre appareil, plus nous vous montrerons de nouvelles applications ici.</p>
                                                 </div>
 
                                                 <div className="top-0 -ml-10">

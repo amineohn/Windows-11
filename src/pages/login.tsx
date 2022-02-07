@@ -3,14 +3,18 @@ import { useState } from "react";
 export default function Home() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
     const router = useRouter();
     const handleSubmit = (e) => {
         e.preventDefault();
         if (password === "") {
-            setError("Password is required");
+            setError("Le mot de passe est requises.");
+            setSuccess("");
         }
         if (password === "password") {
             router.push("/home");
+            setError("");
+            setSuccess("Bienvenue sur Windows 11.");
         }
     };
     return (
@@ -28,10 +32,11 @@ export default function Home() {
                                     onChange={(e) => setPassword(e.target.value)}
                                     className={`w-80 h-12 px-4 py-4 rounded-lg bg-neutral-900/70 text-gray-100 placeholder-gray-100 border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 ${
                                         error ? "border-b-red-700" : "border-b-orange-700"
-                                    } focus:outline-none focus:shadow-outline`}
-                                    placeholder="Password"
+                                    } ${success ? "border-b-green-700" : "border-b-orange-700"} focus:outline-none focus:shadow-outline`}
+                                    placeholder="Mot de passe"
                                 />
                                 {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
+                                {success && <p className="text-green-600 text-sm mt-2">{success}</p>}
                             </form>
                         </div>
                     </div>
