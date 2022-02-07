@@ -24,7 +24,7 @@ export default function Home() {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0">
                             <Draggable>
-                                <div className="group w-[550px] h-96 bg-neutral-900 shadow-lg border border-neutral-800 rounded-md">
+                                <div className="group w-[550px] h-96 bg-neutral-900 shadow-lg border border-neutral-800 rounded-md z-50">
                                     <div className="bg-neutral-900 rounded-tl-md rounded-tr-md px-2 py-2 h-10">
                                         <div className="flex items-center justify-between">
                                             <h1 className="text-[#F1F1F1]">Warning</h1>
