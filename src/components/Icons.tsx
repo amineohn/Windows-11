@@ -2,7 +2,7 @@ const Icons = ({ icon, className, onClick }: any) => {
     switch (icon) {
         case "start":
             return (
-                <div onClick={onClick} className="flex justify-center items-center w-10 h-10 hover:bg-black/20 transition-colors ease-in-out duration-150 rounded-md">
+                <div onClick={onClick} className="flex justify-center items-center w-10 h-10 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                     <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                         <rect x="0.5" width="23.5" height="23.5" fill="url(#pattern0)" />
                         <defs>
@@ -21,7 +21,7 @@ const Icons = ({ icon, className, onClick }: any) => {
             );
         case "search":
             return (
-                <div onClick={onClick} className="flex justify-center items-center w-10 h-10 hover:bg-black/20 transition-colors ease-in-out duration-150 rounded-md">
+                <div onClick={onClick} className="flex justify-center items-center w-10 h-10 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                     <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                         <rect width="24" height="24" fill="url(#pattern28)" />
                         <defs>
@@ -40,7 +40,7 @@ const Icons = ({ icon, className, onClick }: any) => {
             );
         case "teams":
             return (
-                <div className="flex justify-center items-center w-10 h-10 hover:bg-black/20 transition-colors ease-in-out duration-150 rounded-md">
+                <div className="flex justify-center items-center w-10 h-10 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                     <svg className={className} viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                         <rect width="23" height="23" fill="url(#pattern3)" />
                         <defs>
@@ -59,7 +59,7 @@ const Icons = ({ icon, className, onClick }: any) => {
             );
         case "edge":
             return (
-                <div className="flex justify-center items-center w-10 h-10 hover:bg-black/20 transition-colors ease-in-out duration-150 rounded-md">
+                <div className="flex justify-center items-center w-10 h-10 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                     <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                         <rect width="24" height="24" fill="url(#pattern5)" />
                         <defs>
@@ -95,7 +95,7 @@ const Icons = ({ icon, className, onClick }: any) => {
             );
         case "explorer":
             return (
-                <div onClick={onClick} className="flex justify-center items-center w-10 h-10 hover:bg-black/20 transition-colors ease-in-out duration-150 rounded-md">
+                <div onClick={onClick} className="flex justify-center items-center w-10 h-10 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                     <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                         <rect width="24" height="24" fill="url(#pattern4)" />
                         <defs>
