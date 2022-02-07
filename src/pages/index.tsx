@@ -45,10 +45,10 @@ export default function Home() {
                         enter="transition-opacity duration-200 ease-in slide-in-bottom"
                         enterFrom="opacity-0"
                         enterTo="opacity-100 slide-in-bottom"
-                        leave="transition-opacity duration-400 ease-out scale-out-ver-bottom"
-                        leaveFrom="opacity-100 scale-out-ver-bottom"
+                        leave="transition-all slide-out-bottom"
+                        leaveFrom="opacity-100 slide-out-bottom"
                         className="flex absolute items-center justify-center mt-24"
-                        leaveTo="opacity-0 scale-out-ver-bottom">
+                        leaveTo="opacity-0 slide-out-bottom">
                         <>
                             <div className="w-[642px] h-[726px] bg-neutral-900/90 backdrop-blur-md rounded-lg shadow-lg">
                                 <div className="px-10 py-10">
@@ -278,12 +278,11 @@ export default function Home() {
                     <Transition
                         show={openSearch}
                         enter="transition-opacity duration-200 ease-in slide-in-bottom"
-                        enterFrom="opacity-0"
                         enterTo="opacity-100 slide-in-bottom"
-                        leave="transition-opacity duration-400 ease-out scale-out-ver-bottom"
-                        leaveFrom="opacity-100 scale-out-ver-bottom"
+                        leave="transition-all slide-out-bottom"
+                        leaveFrom="opacity-100 slide-out-bottom"
                         className="flex absolute items-center justify-center mt-24"
-                        leaveTo="opacity-0 scale-out-ver-bottom">
+                        leaveTo="opacity-0 slide-out-bottom">
                         <>
                             <div className="w-[642px] h-[726px] bg-neutral-900/90 backdrop-blur-md rounded-lg shadow-lg">
                                 <div className="px-10 py-10">
