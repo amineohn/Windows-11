@@ -34,6 +34,7 @@ export default function Home() {
                                         error ? "border-b-red-700" : "border-b-orange-700"
                                     } ${success ? "border-b-green-700" : "border-b-orange-700"} focus:outline-none focus:shadow-outline`}
                                     placeholder="Mot de passe"
+                                    autoComplete="off"
                                 />
                                 {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
                                 {success && <p className="text-green-600 text-sm mt-2">{success}</p>}
