@@ -21,7 +21,7 @@ const Icons = ({ icon, className, onClick }: any) => {
             );
         case "search":
             return (
-                <div className="flex justify-center items-center w-10 h-10 hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
+                <div onClick={onClick} className="flex justify-center items-center w-10 h-10 hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
                     <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                         <rect width="24" height="24" fill="url(#pattern1)" />
                         <defs>
