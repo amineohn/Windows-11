@@ -526,7 +526,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="bg-neutral-900/80 backdrop-blur-lg py-1 sticky bottom-0">
-                    <div className="flex justify-between items-center space-x-3">
+                    <div className="flex justify-between items-center">
                         <div className="flex justify-center items-center m-auto space-x-3">
                             {startMenu ? <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(false)} /> : <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(true)} />}
                             {openSearch ? (
@@ -543,7 +543,7 @@ export default function Home() {
                             )}
                             <Icons icon="edge" className="w-6 h-6" />
                         </div>
-                        <div className="flex items-center justify-end pr-4">
+                        <div className="flex items-center justify-end px-2">
                             <div className="flex justify-end items-center w-20 h-10 px-2 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                                 <svg className="w-20 h-10" viewBox="0 0 68 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
