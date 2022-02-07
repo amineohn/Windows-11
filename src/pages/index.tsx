@@ -50,7 +50,7 @@ export default function Home() {
                         className="flex absolute items-center justify-center mt-24"
                         leaveTo="opacity-0 slide-out-bottom">
                         <>
-                            <div className="w-[642px] h-[726px] bg-neutral-900/90 backdrop-blur-md rounded-lg shadow-lg">
+                            <div className="w-[642px] h-[726px] bg-neutral-900/80 backdrop-blur-xl rounded-lg shadow-lg">
                                 <div className="px-10 py-10">
                                     <div className="space-y-8">
                                         <div>
@@ -284,7 +284,7 @@ export default function Home() {
                         className="flex absolute items-center justify-center mt-24"
                         leaveTo="opacity-0 slide-out-bottom">
                         <>
-                            <div className="w-[642px] h-[726px] bg-neutral-900/90 backdrop-blur-md rounded-lg shadow-lg">
+                            <div className="w-[642px] h-[726px] bg-neutral-900/80 backdrop-blur-xl rounded-lg shadow-lg">
                                 <div className="px-10 py-10">
                                     <div className="space-y-8">
                                         <div>
@@ -524,7 +524,7 @@ export default function Home() {
                         <span className="text-white/90 text-md font-medium">Spotify</span>
                     </div>
                 </div>
-                <div className="bg-neutral-900/80 backdrop-blur-lg py-1 sticky bottom-0">
+                <div className="bg-neutral-900/80 backdrop-blur-xl py-1 sticky bottom-0">
                     <div className="flex justify-between items-center">
                         <div className="flex justify-center items-center m-auto space-x-3">
                             {startMenu ? <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(false)} /> : <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(true)} />}
