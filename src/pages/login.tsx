@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 export default function Home() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const router = useRouter();
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTMLElement>) => {
         e.preventDefault();
         if (password === "") {
             setError("Le mot de passe est requises.");
