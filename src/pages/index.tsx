@@ -1,12 +1,15 @@
 import Icons from "@/components/Icons";
 import { Transition } from "@headlessui/react";
+import moment from "moment";
 import { useState } from "react";
 import Draggable from "react-draggable";
-
 export default function Home() {
     const [openWidow, setOpenWindow] = useState(false);
     const [startMenu, setStartMenu] = useState(false);
     const [openSearch, setOpenSearch] = useState(false);
+    // get current hours and minutes
+    const moments = moment().add(10, "days").calendar();
+    const date = moment().format("hh:mm");
     return (
         <>
             <div className="flex flex-col justify-between">
@@ -539,14 +542,7 @@ export default function Home() {
                             )}
                             <Icons icon="edge" className="w-6 h-6" />
                         </div>
-                        <div className="flex items-center justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none" className="mr-10">
-                                <path
-                                    d="M0.147077 6.35411C-0.0485327 6.15919 -0.0490966 5.84261 0.145817 5.647L5.6108 0.162517C5.82574 -0.0531963 6.17505 -0.0531954 6.39 0.162517L11.855 5.647C12.0499 5.84261 12.0493 6.15919 11.8537 6.35411C11.6581 6.54902 11.3415 6.54846 11.1466 6.35285L6.0004 1.18827L0.854183 6.35285C0.659269 6.54846 0.342687 6.54902 0.147077 6.35411Z"
-                                    fill="#212121"
-                                />
-                            </svg>
-
+                        <div className="flex items-center justify-end px-2">
                             <div className="flex justify-end items-center w-20 h-10 px-2 hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
                                 <svg className="w-20 h-10" viewBox="0 0 68 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -562,6 +558,10 @@ export default function Home() {
                                         fill="#212121"
                                     />
                                 </svg>
+                            </div>
+                            <div className="flex flex-col hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md px-1 py-1">
+                                <span className="text-xs text-right">{date}</span>
+                                <span className="text-xs">{moments}</span>
                             </div>
                         </div>
                     </div>
