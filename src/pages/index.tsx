@@ -251,8 +251,8 @@ export default function Home() {
 
                                                 <div className="top-0 -ml-10">
                                                     <div className="w-[642px] h-[62px] border-b-transparent border border-l-transparent border-r-transparent border-t-neutral-800/70 rounded-b-lg">
-                                                        <div className="flex justify-evenly	space-x-60 mt-2">
-                                                            <div className="w-[163px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-evenly	space-x-60 mt-3">
+                                                            <div className="w-[120px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                                                                 <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" />
                                                                 <span className="text-white/90 font-medium">Amine</span>
                                                             </div>
@@ -485,17 +485,17 @@ export default function Home() {
 
                                                 <div className="top-0 -ml-10">
                                                     <div className="w-[642px] h-[62px] border-b-transparent border border-l-transparent border-r-transparent border-t-neutral-800/70 rounded-b-lg">
-                                                        <div className="flex justify-evenly	space-x-60">
-                                                            <div className="w-[163px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
+                                                        <div className="flex justify-evenly	space-x-60 mt-3">
+                                                            <div className="w-[120px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                                                                 <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" />
                                                                 <span className="text-white/90 font-medium">Amine</span>
                                                             </div>
                                                             <div className="flex justify-center items-center">
                                                                 <div className="w-10 h-10 flex justify-center items-center hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                    <Icons icon="poweroff" className="w-5 h-5" />
+                                                                    <Icons icon="poweroff" className="w-5 h-5 text-white" />
                                                                 </div>
                                                                 <div className="w-10 h-10 flex justify-center items-center hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                    <Icons icon="setting" className="w-5 h-5" />
+                                                                    <Icons icon="setting" className="w-5 h-5 text-white" />
                                                                 </div>
                                                             </div>
                                                         </div>
