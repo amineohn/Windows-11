@@ -14,9 +14,9 @@ export default function Home() {
                     <div className="flex flex-col">
                         <Transition
                             show={openWidow}
-                            enter="transition-opacity duration-400 ease-in"
+                            enter="transition-opacity duration-400 ease-in scale-in-bottom"
                             enterFrom="opacity-0"
-                            enterTo="opacity-100"
+                            enterTo="opacity-100 scale-in-bottom"
                             leave="transition-opacity duration-400 ease-out"
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0">
@@ -42,10 +42,10 @@ export default function Home() {
                         enter="transition-opacity duration-200 ease-in slide-in-bottom"
                         enterFrom="opacity-0"
                         enterTo="opacity-100 slide-in-bottom"
-                        leave="transition-opacity duration-400 ease-out"
-                        leaveFrom="opacity-100"
+                        leave="transition-opacity duration-400 ease-out scale-out-ver-bottom"
+                        leaveFrom="opacity-100 scale-out-ver-bottom"
                         className="flex absolute items-center justify-center mt-24"
-                        leaveTo="opacity-0">
+                        leaveTo="opacity-0 scale-out-ver-bottom">
                         <>
                             <div className="w-[642px] h-[726px] bg-blue-100 rounded-lg shadow-lg">
                                 <div className="px-10 py-10">
@@ -276,10 +276,10 @@ export default function Home() {
                         enter="transition-opacity duration-200 ease-in slide-in-bottom"
                         enterFrom="opacity-0"
                         enterTo="opacity-100 slide-in-bottom"
-                        leave="transition-opacity duration-400 ease-out"
-                        leaveFrom="opacity-100"
+                        leave="transition-opacity duration-400 ease-out scale-out-ver-bottom"
+                        leaveFrom="opacity-100 scale-out-ver-bottom"
                         className="flex absolute items-center justify-center mt-24"
-                        leaveTo="opacity-0">
+                        leaveTo="opacity-0 scale-out-ver-bottom">
                         <>
                             <div className="w-[642px] h-[726px] bg-blue-100 rounded-lg shadow-lg">
                                 <div className="px-10 py-10">
