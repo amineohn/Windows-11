@@ -4,13 +4,13 @@ import Head from "next/head";
 import MetaTags from "@/components/MetaTags";
 
 const metaData = {
-    title: "My Next JS Website",
-    description: "With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!",
-    url: "https://www.example.com",
-    image: "https://www.example.com/image.jpg",
+    title: "Windows 11",
+    description: "Laptop with Windows 11 for FiveM.",
+    url: "https://amine.im",
+    image: "/static/images/background5.jpg",
     themeColor: "#ffffff",
     keywords: "key1, key2, key3, key4, key5, key6",
-    author: "Rafly Maulana",
+    author: "Amine Ouhani",
     charSet: "utf-8",
     language: "English",
     icons: [
