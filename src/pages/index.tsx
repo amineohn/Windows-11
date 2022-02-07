@@ -513,8 +513,12 @@ export default function Home() {
 
                 <div className="absolute px-2 py-2">
                     <div className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">
-                        <img className="w-12 h-12 rounded-lg" src="/static/images/nfs.jpg" />
+                        <img className="w-12 h-12 rounded-lg" src="/static/images/app/nfs.jpg" />
                         <span className="text-white/90 text-md font-medium">Tuner mode</span>
+                    </div>
+                    <div className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">
+                        <img className="w-12 h-12 rounded-lg" src="/static/images/app/race.jpg" />
+                        <span className="text-white/90 text-md font-medium">Races</span>
                     </div>
                     <div className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">
                         <Icons icon="spotify" className="w-12 h-12" />
