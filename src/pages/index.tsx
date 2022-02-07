@@ -14,7 +14,7 @@ export default function Home() {
                         <h1 className="text-white">{date}</h1>
                         <div className="mt-3">
                             <button
-                                className="bg-neutral-900/70 hover:bg-neutral-900/80 transition-colors text-white px-12 rounded-lg py-3 focus:outline-none focus:shadow-outline"
+                                className="bg-neutral-900/70 hover:bg-neutral-900/80 transition-colors text-white border-t-transparent border-l-transparent border-r-transparent border-2 border-b-orange-700 px-12 rounded-lg py-3 focus:outline-none focus:shadow-outline"
                                 onClick={() => router.push("/login")}>
                                 Connexion
                             </button>

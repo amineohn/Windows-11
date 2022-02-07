@@ -15,6 +15,12 @@ export default function Home() {
             router.push("/home");
             setError("");
             setSuccess("Bienvenue sur Windows 11.");
+            localStorage.setItem("isLogged", "true");
+            localStorage.setItem("password", password);
+        }
+        if (password !== "password") {
+            setError("Mot de passe incorrect.");
+            setSuccess("");
         }
     };
     return (
