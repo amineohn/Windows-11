@@ -62,7 +62,7 @@ export default function Home() {
                         className="flex absolute items-center justify-center mt-24"
                         leaveTo="opacity-0 scale-out-ver-bottom">
                         <>
-                            <div className="w-[642px] h-[726px] bg-blue-100 rounded-lg shadow-lg">
+                            <div className="w-[642px] h-[726px] bg-blue-100/90 backdrop-blur-md rounded-lg shadow-lg">
                                 <div className="px-10 py-10">
                                     <div className="space-y-8">
                                         <div>
@@ -262,7 +262,7 @@ export default function Home() {
                                                 </div>
 
                                                 <div className="top-0 -ml-10">
-                                                    <div className="w-[642px] h-[62px] border border-t-gray-300 rounded-b-lg">
+                                                    <div className="w-[642px] h-[62px] border-b-transparent border border-l-transparent border-r-transparent border-t-gray-200/70 rounded-b-lg">
                                                         <div className="flex justify-evenly	space-x-60">
                                                             <div className="w-[163px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
                                                                 <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" />
@@ -296,7 +296,7 @@ export default function Home() {
                         className="flex absolute items-center justify-center mt-24"
                         leaveTo="opacity-0 scale-out-ver-bottom">
                         <>
-                            <div className="w-[642px] h-[726px] bg-blue-100 rounded-lg shadow-lg">
+                            <div className="w-[642px] h-[726px] bg-blue-100/90 backdrop-blur-md rounded-lg shadow-lg">
                                 <div className="px-10 py-10">
                                     <div className="space-y-8">
                                         <div>
@@ -496,7 +496,7 @@ export default function Home() {
                                                 </div>
 
                                                 <div className="top-0 -ml-10">
-                                                    <div className="w-[642px] h-[62px] border border-t-gray-300 rounded-b-lg">
+                                                    <div className="w-[642px] h-[62px] border-b-transparent border border-l-transparent border-r-transparent border-t-gray-200/70 rounded-b-lg">
                                                         <div className="flex justify-evenly	space-x-60">
                                                             <div className="w-[163px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-slate-900/5 transition-colors ease-in-out duration-150 rounded-md">
                                                                 <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" />
@@ -521,7 +521,7 @@ export default function Home() {
                         </>
                     </Transition>
                 </main>
-                <div className="bg-blue-100/90 backdrop-blur-sm py-1 sticky bottom-0">
+                <div className="bg-blue-100/90 backdrop-blur-md py-1 sticky bottom-0">
                     <div className="flex justify-between items-center space-x-3">
                         <div className="flex justify-center items-center m-auto space-x-3">
                             {startMenu ? <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(false)} /> : <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(true)} />}
