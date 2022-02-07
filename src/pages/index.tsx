@@ -24,18 +24,18 @@ export default function Home() {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0">
                             <Draggable>
-                                <div className="group w-[550px] h-96 bg-white rounded-md">
-                                    <div className="bg-white rounded-tl-md rounded-tr-md px-2 py-2 h-10">
+                                <div className="group w-[550px] h-96 bg-neutral-900 shadow-lg border border-neutral-800 rounded-md">
+                                    <div className="bg-neutral-900 rounded-tl-md rounded-tr-md px-2 py-2 h-10">
                                         <div className="flex items-center justify-between">
-                                            <h1>Warning</h1>
+                                            <h1 className="text-[#F1F1F1]">Warning</h1>
                                             <div onClick={() => setOpenWindow(false)}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                                    <path stroke="#F1F1F1" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="px-3 py-3">Not finished yet.</div>
+                                    <div className="px-3 py-3 text-white">Not finished yet.</div>
                                 </div>
                             </Draggable>
                         </Transition>
@@ -512,12 +512,12 @@ export default function Home() {
                 </main>
 
                 <div className="absolute px-2 py-2">
-                    <div className="flex justify-center items-center flex-col hover:bg-black/20 rounded-lg transition-colors py-4 px-4 cursor-pointer">
+                    <div className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">
                         <img className="w-20 h-20 rounded-lg" src="https://media.contentapi.ea.com/content/dam/gin/images/2019/08/nsfh-keyart-gin.jpg.adapt.crop1x1.767p.jpg" />
 
                         <span className="text-white/90 text-md font-medium">Tuner mode</span>
                     </div>
-                    <div className="flex justify-center items-center flex-col hover:bg-black/20 rounded-lg transition-colors py-4 px-4 cursor-pointer">
+                    <div className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">
                         <img className="w-20 h-20 rounded-lg" src="https://media.contentapi.ea.com/content/dam/gin/images/2019/08/nsfh-keyart-gin.jpg.adapt.crop1x1.767p.jpg" />
 
                         <span className="text-white/90 text-md font-medium">Tuner mode</span>
