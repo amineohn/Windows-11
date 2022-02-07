@@ -62,7 +62,7 @@ export default function Home() {
                                             <input
                                                 type="text"
                                                 placeholder="Type here to search"
-                                                className="w-full h-10 px-8 py-4 rounded-[0.250rem] bg-neutral-900 text-gray-100 placeholder-gray-100 border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 border-b-purple-700 focus:outline-none focus:shadow-outline"
+                                                className="w-full h-10 px-8 py-4 rounded-[0.250rem] bg-neutral-900 text-gray-100 placeholder-gray-100 border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 border-b-orange-700 focus:outline-none focus:shadow-outline"
                                             />
                                         </div>
                                         <div className="w-[576px] h-[302px]">
@@ -297,7 +297,7 @@ export default function Home() {
                                             <input
                                                 type="text"
                                                 placeholder="Type here to search"
-                                                className="w-full h-10 px-8 py-4 rounded-[0.250rem] bg-neutral-900 text-gray-100 placeholder-gray-100 border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 border-b-purple-700 focus:outline-none focus:shadow-outline"
+                                                className="w-full h-10 px-8 py-4 rounded-[0.250rem] bg-neutral-900 text-gray-100 placeholder-gray-100 border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 border-b-orange-700 focus:outline-none focus:shadow-outline"
                                             />
                                         </div>
                                         <div className="w-[576px] h-[302px]">
