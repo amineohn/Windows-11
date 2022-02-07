@@ -10,6 +10,21 @@ export default function Home() {
     return (
         <>
             <div className="flex flex-col justify-between">
+                <div className="flex-col hidden">
+                    <div className="flex justify-center items-center flex-col hover:bg-white/20 rounded-lg transition-colors py-4 cursor-pointer">
+                        <img className="w-20 h-20 rounded-lg" src="https://media.contentapi.ea.com/content/dam/gin/images/2019/08/nsfh-keyart-gin.jpg.adapt.crop1x1.767p.jpg" />
+
+                        <span className="text-black/90 text-md font-medium">Tuner mode</span>
+                    </div>
+                </div>
+                <div className="flex-col hidden">
+                    <div className="flex justify-center items-center flex-col hover:bg-white/20 rounded-lg transition-colors py-4 cursor-pointer">
+                        <img className="w-20 h-20 rounded-lg" src="https://media.contentapi.ea.com/content/dam/gin/images/2019/08/nsfh-keyart-gin.jpg.adapt.crop1x1.767p.jpg" />
+
+                        <span className="text-black/90 text-md font-medium">Tuner mode</span>
+                    </div>
+                </div>
+
                 <main className="flex justify-center min-h-screen items-center w-full h-full">
                     <div className="flex flex-col">
                         <Transition
