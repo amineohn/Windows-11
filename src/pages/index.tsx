@@ -7,9 +7,9 @@ export default function Home() {
     const [openWidow, setOpenWindow] = useState(false);
     const [startMenu, setStartMenu] = useState(false);
     const [openSearch, setOpenSearch] = useState(false);
-    // get current hours and minutes
-    const moments = moment().add(10, "days").calendar();
-    const date = moment().format("hh:mm");
+
+    const date = moment().add(10, "days").calendar();
+    const time = moment().format("HH:mm");
     return (
         <>
             <div className="flex flex-col justify-between">
@@ -560,8 +560,8 @@ export default function Home() {
                                 </svg>
                             </div>
                             <div className="flex flex-col hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md px-1.5 py-1.5">
-                                <span className="text-xs text-right text-white">{date}</span>
-                                <span className="text-xs text-white">{moments}</span>
+                                <span className="text-xs text-right text-white">{time}</span>
+                                <span className="text-xs text-white">{date}</span>
                             </div>
                         </div>
                     </div>
