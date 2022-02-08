@@ -14,7 +14,7 @@ export default function Home() {
         <>
             <div className="flex flex-col justify-between">
                 <main className="flex justify-center min-h-screen items-center w-full h-full">
-                    <div className="space-x-2 inline-flex">
+                    <div className="space-x-2 inline-flex z-50">
                         <Transition
                             show={openTunerMode}
                             enter="transition-opacity duration-400 ease-in scale-in-bottom"
