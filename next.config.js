@@ -25,7 +25,9 @@ const config = (phase) => {
         settings,
     };
 };
-
+module.exports = {
+    assetPrefix: ".",
+};
 const pipe = (funcs) => (value) => funcs.reduce((v, f) => f(v), value);
 module.exports = (phase, { defaultConfig }) => {
     const cfg = config(phase, { defaultConfig });
