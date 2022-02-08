@@ -30,7 +30,7 @@ export default function Home() {
                     <div className="slide-in-top">
                         <div className="space-y-2">
                             <div className="flex justify-center items-center">
-                                <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-48 h-48 rounded-full" />
+                                <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-48 h-48 rounded-full" alt="me" />
                             </div>
                             <form method="POST" onSubmit={handleSubmit}>
                                 <input

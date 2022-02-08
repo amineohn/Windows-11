@@ -253,7 +253,7 @@ export default function Home() {
                                                     <div className="w-[642px] h-[62px] border-b-transparent border border-l-transparent border-r-transparent border-t-neutral-800/70 rounded-b-lg">
                                                         <div className="flex justify-evenly	space-x-60 mt-0.5">
                                                             <div className="w-[120px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" />
+                                                                <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" alt="me" />
                                                                 <span className="text-white/90 font-medium">Amine</span>
                                                             </div>
                                                             <div className="flex justify-center items-center">
@@ -487,7 +487,7 @@ export default function Home() {
                                                     <div className="w-[642px] h-[62px] border-b-transparent border border-l-transparent border-r-transparent border-t-neutral-800/70 rounded-b-lg">
                                                         <div className="flex justify-evenly	space-x-60 mt-0.5">
                                                             <div className="w-[120px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" />
+                                                                <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" alt="me" />
                                                                 <span className="text-white/90 font-medium">Amine</span>
                                                             </div>
                                                             <div className="flex justify-center items-center">
@@ -512,11 +512,11 @@ export default function Home() {
 
                 <div className="absolute px-2 py-2">
                     <div className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">
-                        <img className="w-12 h-12 rounded-lg" src="/static/images/app/nfs.jpg" />
+                        <img className="w-12 h-12 rounded-lg" src="/static/images/app/nfs.jpg" alt="Tuner Cars" />
                         <span className="text-white/90 text-md font-medium">Tuner Cars</span>
                     </div>
                     <div className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">
-                        <img className="w-12 h-12 rounded-lg" src="/static/images/app/race.jpg" />
+                        <img className="w-12 h-12 rounded-lg" src="/static/images/app/race.jpg" alt="Races" />
                         <span className="text-white/90 text-md font-medium">Races</span>
                     </div>
                     <div className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">
