@@ -54,7 +54,7 @@ export default function Home() {
                         enterTo="opacity-100 duration-500 slide-in-bottom"
                         leave="transition-all duration-500  slide-out-bottom"
                         leaveFrom="opacity-100  duration-500 slide-out-bottom"
-                        className="flex absolute items-center justify-center mt-0 md:mt-0 lg:mt-20 w-full h-full"
+                        className="flex absolute items-center justify-center mt-0 md:mt-0 lg:mt-28 w-full h-full"
                         leaveTo="opacity-0 duration-500 slide-out-bottom">
                         <>
                             <div className="absolute w-full h-full" onClick={() => setStartMenu(false)}></div>
