@@ -1,16 +1,20 @@
+import Calendar from "@/components/calendar";
 import HoverMenu from "@/components/hoverMenu";
 import Icons from "@/components/icons";
 import MenuIcon from "@/components/menuIcon";
 import OpenWindow from "@/components/openWindow";
 import Window from "@/components/window";
 import { Transition } from "@headlessui/react";
-import moment from "moment";
+import { format } from "date-fns";
 import { useState } from "react";
 export default function Home() {
     const [startMenu, setStartMenu] = useState(false);
     const [openSpotify, setOpenSpotify] = useState(false);
-    const date = moment().add(10, "days").calendar();
-    const time = moment().format("HH:mm");
+    const [openCalendar, setOpenCalendar] = useState(false);
+    const date = format(new Date(), "dd/MM/yyyy");
+    // calendar with date and days moment.js
+    // get time from date-fns
+    const time = format(new Date(), "HH:mm");
     return (
         <>
             <div className="flex flex-col justify-between fade-in">
@@ -154,6 +158,7 @@ export default function Home() {
                             </div>
                         </>
                     </Transition>
+                    <Calendar open={openCalendar} />
                 </main>
 
                 <div className="absolute px-4 py-4">
@@ -207,10 +212,21 @@ export default function Home() {
                                     />
                                 </svg>
                             </div>
-                            <div className="flex flex-col hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md px-1.5 py-1.5">
-                                <span className="text-xs text-right text-white">{time}</span>
-                                <span className="text-xs text-white">{date}</span>
-                            </div>
+                            {openCalendar ? (
+                                <div
+                                    className={`${openCalendar ? "bg-white/10" : ""} flex flex-col hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md px-1.5 py-1.5`}
+                                    onClick={() => setOpenCalendar(false)}>
+                                    <span className="text-xs text-right text-white">{time}</span>
+                                    <span className="text-xs text-white">{date}</span>
+                                </div>
+                            ) : (
+                                <div
+                                    className={`${openCalendar ? "bg-white/10" : ""} flex flex-col hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md px-1.5 py-1.5`}
+                                    onClick={() => setOpenCalendar(true)}>
+                                    <span className="text-xs text-right text-white">{time}</span>
+                                    <span className="text-xs text-white">{date}</span>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

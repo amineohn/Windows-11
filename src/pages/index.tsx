@@ -1,11 +1,11 @@
 import { Transition } from "@headlessui/react";
-import moment from "moment";
+import { format } from "date-fns";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 export default function Home() {
-    moment().locale("fr");
-    const date = moment().format("dddd MMMM Do");
-    const time = moment().format("HH:mm");
+    const time = format(new Date(), "HH:mm");
+    const date = format(new Date(), "EEEE, MMMM dd");
+
     const [startWindows, setStartWindows] = useState(true);
     const [showLogin, setShowLogin] = useState(false);
     const router = useRouter();
@@ -57,7 +57,7 @@ export default function Home() {
                                 <button
                                     className="bg-neutral-900/70 hover:bg-neutral-900/80 transition-colors text-white border-t-transparent border-l-transparent border-r-transparent px-12 rounded-lg py-2.5 focus:outline-none focus:shadow-outline"
                                     onClick={() => router.push("/login")}>
-                                    Connexion
+                                    Login
                                 </button>
                             </div>
                         </div>

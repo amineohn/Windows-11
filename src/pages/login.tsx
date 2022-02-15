@@ -8,18 +8,18 @@ export default function Home() {
     const handleSubmit = (e: FormEvent<HTMLElement>) => {
         e.preventDefault();
         if (password === "") {
-            setError("Le mot de passe est requises.");
+            setError("Please, enter the password");
             setSuccess("");
         }
         if (password === "password") {
             router.push("/home");
             setError("");
-            setSuccess("Bienvenue sur Windows 11.");
+            setSuccess("Welcome to Windows 11.");
             localStorage.setItem("isLogged", "true");
             localStorage.setItem("password", password);
         }
         if (password !== "password") {
-            setError("Mot de passe incorrect.");
+            setError("Password is incorrect");
             setSuccess("");
         }
     };
@@ -39,7 +39,7 @@ export default function Home() {
                                     className={`w-80 h-12 px-4 py-4 rounded-lg bg-neutral-900/70 text-gray-100 placeholder-gray-100 border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 ${
                                         error ? "border-b-red-700" : "border-b-rose-700"
                                     } ${success ? "border-b-green-700" : "border-b-rose-700"} focus:outline-none focus:shadow-outline`}
-                                    placeholder="Mot de passe"
+                                    placeholder="Password"
                                     autoComplete="off"
                                 />
                                 {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
