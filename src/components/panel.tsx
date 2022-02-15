@@ -16,8 +16,8 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                 <div className="grid grid-cols-1 space-y-5">
                     <div className="inline-flex items-center justify-center space-x-2 w-full">
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[60px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
-                                <div className="flex justify-center items-center my-[1.458rem]">
+                            <button className="w-[98px] h-[50px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
+                                <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-2 space-x-5">
                                         <div>
                                             <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,8 +43,8 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                             <span className="text-center text-white font-normal text-sm">WI-FI</span>
                         </div>
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[60px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
-                                <div className="flex justify-center items-center my-[1.458rem]">
+                            <button className="w-[98px] h-[50px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
+                                <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
                                             <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +61,8 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                             <span className="text-center text-white font-normal text-sm">Bluetooth</span>
                         </div>
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[60px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
-                                <div className="flex justify-center items-center my-[1.458rem]">
+                            <button className="w-[98px] h-[50px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
+                                <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,8 +81,8 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                     </div>
                     <div className="inline-flex items-center justify-center space-x-2 w-full">
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[60px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
-                                <div className="flex justify-center items-center my-[1.458rem]">
+                            <button className="w-[98px] h-[50px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
+                                <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,8 +99,8 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                             <span className="text-center text-white font-normal text-sm">Night light</span>
                         </div>
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[60px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
-                                <div className="flex justify-center items-center my-[1.458rem]">
+                            <button className="w-[98px] h-[50px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
+                                <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
                                             <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,8 +117,8 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                             <span className="text-center text-white font-normal text-sm">Project</span>
                         </div>
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[60px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
-                                <div className="flex justify-center items-center my-[1.458rem]">
+                            <button className="w-[98px] h-[50px] rounded-md bg-neutral-600/60 text-white transition hover:bg-neutral-600/80 focus:text-black border border-neutral-600 focus:bg-sky-400 focus:outline-none">
+                                <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
                                             <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
