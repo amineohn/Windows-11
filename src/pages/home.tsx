@@ -13,8 +13,6 @@ export default function Home() {
     const [openCalendar, setOpenCalendar] = useState(false);
     const [openViewCalendar, setOpenViewCalendar] = useState(false);
     const date = format(new Date(), "dd/MM/yyyy");
-    // calendar with date and days moment.js
-    // get time from date-fns
     const time = format(new Date(), "HH:mm");
     return (
         <>
