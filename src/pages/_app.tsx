@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import MetaTags from "@/components/MetaTags";
+import { ThemeProvider } from "next-themes";
 
 const metaData = {
     title: "Windows 11",
@@ -30,7 +31,9 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <MetaTags metaData={metaData} />
             </Head>
 
-            <Component {...pageProps} />
+            <ThemeProvider defaultTheme="light" attribute="class">
+                <Component {...pageProps} />
+            </ThemeProvider>
         </>
     );
 };

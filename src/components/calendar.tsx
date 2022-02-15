@@ -16,8 +16,8 @@ const Calendar = ({ open, openCalendar, onClick }: OpenViewCalendarProps) => {
             leaveTo="opacity-0 duration-500 slide-out-right"
             className={`absolute right-[13px] bottom-[65px] w-[335px] h-[400px] ${
                 openCalendar ? "" : "!h-14"
-            } flex flex-col bg-neutral-700/30 border border-neutral-600 backdrop-filter backdrop-blur-lg rounded-lg shadow-2xl duration-200 overflow-hidden`}>
-            <div className={`${openCalendar ? "" : "bg-neutral-700/40"} flex items-center bg-neutral-900/70 px-6 py-4`}>
+            } flex flex-col bg-white/30 dark:bg-neutral-700/30 border border-gray-300 dark:border-neutral-600 backdrop-blur-lg rounded-lg shadow-2xl duration-200 overflow-hidden`}>
+            <div className={`${openCalendar ? "" : "bg-white/40 dark:bg-neutral-700/40"} flex items-center bg-white/40 dark:bg-neutral-900/70 px-6 py-4`}>
                 <span className="text-sm text-gray-700 dark:text-white flex-grow">{date}</span>
                 <button onClick={onClick} className="bg-gray-400 bg-opacity-10 border border-gray-400 border-opacity-20 p-1.5 rounded-md">
                     {openCalendar ? (

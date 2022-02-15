@@ -5,7 +5,7 @@ const MenuIcon = ({ icon, title }: MenuIconProps) => {
             <div className="flex justify-center items-center flex-col space-y-2 mt-2">
                 {icon}
 
-                <span className="text-white/90">{title}</span>
+                <span className="text-black/90 dark:text-white/90">{title}</span>
             </div>
         </div>
     );
