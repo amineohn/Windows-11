@@ -1,16 +1,8 @@
 import { OpenViewPanelProps } from "@/interfaces";
 import { Transition } from "@headlessui/react";
-import { useTheme } from "next-themes";
 import Themes from "./themes";
 
 const Panel = ({ open }: OpenViewPanelProps) => {
-    const { theme, setTheme } = useTheme();
-
-    const getNextTheme = (): string => {
-        if (theme === "dark") return "light";
-        if (theme === "light") return "system";
-        return "dark";
-    };
     return (
         <Transition
             show={open}
