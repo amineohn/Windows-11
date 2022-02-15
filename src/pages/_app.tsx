@@ -5,7 +5,7 @@ import MetaTags from "@/components/MetaTags";
 
 const metaData = {
     title: "Windows 11",
-    description: "Laptop with Windows 11 for FiveM.",
+    description: "Portfolio website Windows 11 made with Tailwind CSS and Next.js",
     url: "https://amine.im",
     image: "/static/images/background5.jpg",
     themeColor: "#ffffff",
