@@ -1,14 +1,7 @@
+import { WindowProps } from "@/interfaces";
 import { Transition } from "@headlessui/react";
-import { ReactNode } from "react";
 import Draggable from "react-draggable";
 
-interface WindowProps {
-    title: string;
-    content: ReactNode;
-    icon: ReactNode;
-    onClick: () => void;
-    open: boolean;
-}
 const Window = ({ open, onClick, title, icon, content }: WindowProps) => {
     return (
         <Transition

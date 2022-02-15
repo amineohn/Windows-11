@@ -1,5 +1,5 @@
 import HoverMenu from "@/components/hoverMenu";
-import Icons from "@/components/Icons";
+import Icons from "@/components/icons";
 import MenuIcon from "@/components/menuIcon";
 import OpenWindow from "@/components/openWindow";
 import Window from "@/components/window";

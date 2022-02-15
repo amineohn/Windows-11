@@ -1,9 +1,5 @@
-interface IIconProps {
-    icon: any;
-    className: string;
-    onClick?: () => void;
-    action: string;
-}
+import { IIconProps } from "@/interfaces";
+
 const Icons = ({ icon, className, onClick, action }: IIconProps) => {
     switch (icon) {
         case "start":

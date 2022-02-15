@@ -1,10 +1,5 @@
-import { ReactNode } from "react";
+import { openWindowProps } from "@/interfaces";
 
-interface openWindowProps {
-    onClick: () => void;
-    icon: ReactNode;
-    title: string;
-}
 const OpenWindow = ({ onClick, icon, title }: openWindowProps) => {
     return (
         <div onClick={onClick} className="flex justify-center items-center flex-col hover:bg-white/10 rounded-lg transition-colors py-4 px-4 cursor-pointer">

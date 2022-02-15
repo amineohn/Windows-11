@@ -1,15 +1,7 @@
+import { HoverMenuProps } from "@/interfaces";
 import { Transition } from "@headlessui/react";
-import { ReactNode } from "react";
-import Icons from "./Icons";
+import Icons from "./icons";
 
-interface HoverMenuProps {
-    open: boolean;
-    onClick: () => void;
-    isImage: boolean;
-    icon: any;
-    className: string;
-    action: string;
-}
 const HoverMenu = ({ open, onClick, icon, className, isImage, action }: HoverMenuProps) => {
     return (
         <Transition
