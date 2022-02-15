@@ -7,6 +7,7 @@ import Panel from "@/components/panel";
 import Window from "@/components/window";
 import { Transition } from "@headlessui/react";
 import { format } from "date-fns";
+import { useRouter } from "next/router";
 import { useState } from "react";
 export default function Home() {
     const [startMenu, setStartMenu] = useState(false);
@@ -14,12 +15,28 @@ export default function Home() {
     const [openCalendar, setOpenCalendar] = useState(false);
     const [openViewCalendar, setOpenViewCalendar] = useState(false);
     const [openPanel, setOpenPanel] = useState(false);
+    const [shutdown, setShutdown] = useState(false);
+    const router = useRouter();
     const date = format(new Date(), "dd/MM/yyyy");
     const time = format(new Date(), "HH:mm");
     return (
         <>
             <div className="flex flex-col justify-between fade-in">
                 <main className="flex justify-center min-h-screen items-center w-full h-full">
+                    <Transition
+                        show={shutdown}
+                        enter="transition-opacity duration-500 ease-in"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="transition-opacity duration-500 ease-out"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0 duration-500"
+                        className="bg-black w-screen min-h-screen z-[9999]">
+                        <div className="flex h-screen space-y-10 flex-col justify-center items-center">
+                            <div className="border-t-transparent w-36 h-36 border-4 border-white border-dotted rounded-full animate-spin"></div>
+                            <span className="text-2xl text-white">Shutting down</span>
+                        </div>
+                    </Transition>
                     <div className="space-x-2 inline-flex z-50">
                         <Window
                             open={openSpotify}
@@ -141,7 +158,14 @@ export default function Home() {
                                                             </div>
                                                             <div className="flex justify-center items-center">
                                                                 <div
-                                                                    onClick={() => setStartMenu(false)}
+                                                                    onClick={() => {
+                                                                        setShutdown(true);
+                                                                        setInterval(() => {
+                                                                            setShutdown(false);
+                                                                            router.push("/");
+                                                                            localStorage.clear();
+                                                                        }, 3000);
+                                                                    }}
                                                                     className="w-10 h-10 flex justify-center items-center hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                                                                     <Icons icon="poweroff" className="w-5 h-5 text-white" onClick={() => null} action={""} />
                                                                 </div>
