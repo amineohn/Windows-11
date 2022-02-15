@@ -11,6 +11,7 @@ export default function Home() {
     const [startMenu, setStartMenu] = useState(false);
     const [openSpotify, setOpenSpotify] = useState(false);
     const [openCalendar, setOpenCalendar] = useState(false);
+    const [openViewCalendar, setOpenViewCalendar] = useState(false);
     const date = format(new Date(), "dd/MM/yyyy");
     // calendar with date and days moment.js
     // get time from date-fns
@@ -158,7 +159,7 @@ export default function Home() {
                             </div>
                         </>
                     </Transition>
-                    <Calendar open={openCalendar} />
+                    <Calendar open={openCalendar} openCalendar={openViewCalendar} onClick={() => (openViewCalendar ? setOpenViewCalendar(false) : setOpenViewCalendar(true))} />
                 </main>
 
                 <div className="absolute px-4 py-4">
