@@ -14,8 +14,10 @@ const Calendar = ({ open, openCalendar, onClick }: OpenViewCalendarProps) => {
             leave="transition-opacity duration-500 ease-out slide-out-right"
             leaveFrom="opacity-100"
             leaveTo="opacity-0 duration-500 slide-out-right"
-            className={`calendar ${openCalendar ? "" : "!h-14"} flex flex-col bg-neutral-700/40 backdrop-blur-lg rounded-md shadow-2xl duration-200 overflow-hidden`}>
-            <div className="flex items-center bg-black/10 px-6 py-4">
+            className={`absolute right-[13px] bottom-[65px] w-[335px] h-[400px] ${
+                openCalendar ? "" : "!h-14"
+            } flex flex-col bg-neutral-700/30 border border-neutral-600 backdrop-blur-lg rounded-lg shadow-2xl duration-200 overflow-hidden`}>
+            <div className={`${openCalendar ? "" : "bg-neutral-700/40"} flex items-center bg-neutral-900/70 px-6 py-4`}>
                 <span className="text-sm text-gray-700 dark:text-white flex-grow">{date}</span>
                 <button onClick={onClick} className="bg-gray-400 bg-opacity-10 border border-gray-400 border-opacity-20 p-1.5 rounded-md">
                     {openCalendar ? (
@@ -53,13 +55,13 @@ const Calendar = ({ open, openCalendar, onClick }: OpenViewCalendarProps) => {
                 </div>
                 {openCalendar ? (
                     <div className="flex-grow grid items-center grid-rows-6 grid-cols-7 p-4 gap-2">
-                        <div className="flex justify-center items-center text-sm text-gray-600 dark:text-gray-100"> Su </div>
-                        <div className="flex justify-center items-center text-sm text-gray-600 dark:text-gray-100"> Mo </div>
-                        <div className="flex justify-center items-center text-sm text-gray-600 dark:text-gray-100"> Tu </div>
-                        <div className="flex justify-center items-center text-sm text-gray-600 dark:text-gray-100"> We </div>
-                        <div className="flex justify-center items-center text-sm text-gray-600 dark:text-gray-100"> Th </div>
-                        <div className="flex justify-center items-center text-sm text-gray-600 dark:text-gray-100"> Fr </div>
-                        <div className="flex justify-center items-center text-sm text-gray-600 dark:text-gray-100"> Sa </div>
+                        <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Su </div>
+                        <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Mo </div>
+                        <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Tu </div>
+                        <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> We </div>
+                        <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Th </div>
+                        <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Fr </div>
+                        <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Sa </div>
                         <div className="flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-400 dark:text-gray-500"> 30 </div>
                         <div className="flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-400 dark:text-gray-500"> 31 </div>
                         <div className="flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-600 bg-transparent hover:bg-gray-600 hover:bg-opacity-10 dark:text-gray-300 dark:hover:bg-white dark:hover:bg-opacity-10">
