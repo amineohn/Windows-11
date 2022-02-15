@@ -1,7 +1,7 @@
 import { OpenViewPanelProps } from "@/interfaces";
 import { Transition } from "@headlessui/react";
 
-const Panel = ({ open, onClick }: OpenViewPanelProps) => {
+const Panel = ({ open }: OpenViewPanelProps) => {
     return (
         <Transition
             show={open}
