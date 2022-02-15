@@ -22,7 +22,7 @@ export default function Home() {
     }, []);
     return (
         <>
-            <div className="flex flex-col bg-black/10 justify-between backdrop-blur-lg" onClick={() => router.push("/login")}>
+            <div className="flex flex-col bg-blue-200/10 dark:bg-black/10 justify-between backdrop-blur-lg" onClick={() => router.push("/login")}>
                 <main className="flex flex-col justify-center min-h-screen items-center w-full h-full">
                     <Transition
                         show={startWindows}
@@ -32,7 +32,7 @@ export default function Home() {
                         leave="transition-opacity duration-500 ease-out"
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0 duration-500"
-                        className="bg-black w-screen min-h-screen z-[9999]">
+                        className="bg-blue-200 dark:bg-black w-screen min-h-screen z-[9999]">
                         <div className="flex h-screen space-y-10 flex-col justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" version="1.1" viewBox="0 0 48.745 48.747">
                                 <g fill="#0078d4">
@@ -42,7 +42,7 @@ export default function Home() {
                                     <rect x="25.64" y="25.642" width="23.105" height="23.105" />
                                 </g>
                             </svg>
-                            <div className="border-t-transparent w-10 h-10 border-4 border-white border-dotted rounded-full animate-spin"></div>
+                            <div className="border-t-transparent w-10 h-10 border-4 border-black dark:border-white border-dotted rounded-full animate-spin"></div>
                         </div>
                     </Transition>
                     <Transition
@@ -58,7 +58,7 @@ export default function Home() {
                             <h1 className="text-white">{date}</h1>
                             <div className="mt-3">
                                 <button
-                                    className="bg-neutral-900/70 hover:bg-neutral-900/80 transition-colors text-white border-t-transparent border-l-transparent border-r-transparent px-12 rounded-lg py-2.5 focus:outline-none focus:shadow-outline"
+                                    className="bg-white/70 hover:bg-white/80 dark:bg-neutral-900/70 dark:hover:bg-neutral-900/80 transition-colors text-black dark:text-white border-t-transparent border-l-transparent border-r-transparent px-12 rounded-md py-2.5 focus:outline-none focus:shadow-outline"
                                     onClick={() => router.push("/login")}>
                                     Login
                                 </button>

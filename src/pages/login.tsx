@@ -25,7 +25,7 @@ export default function Home() {
     };
     return (
         <>
-            <div className="flex flex-col bg-black/10 justify-between backdrop-blur-lg" onDragEnter={() => router.push("/login")}>
+            <div className="flex flex-col bg-blue-200/10 dark:bg-black/10 justify-between backdrop-blur-lg" onDragEnter={() => router.push("/login")}>
                 <main className="flex flex-col justify-center min-h-screen items-center w-full h-full">
                     <div className="">
                         <div className="space-y-2">
@@ -36,11 +36,9 @@ export default function Home() {
                                 <input
                                     type="password"
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className={`w-80 h-12 px-4 py-4 rounded-lg bg-neutral-900/70 text-gray-100 placeholder-gray-100 ${
-                                        error ? "border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 border-b-red-700" : ""
-                                    } ${
-                                        success ? "border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 border-b-green-700" : ""
-                                    } focus:outline-none focus:shadow-outline`}
+                                    className={`w-80 h-12 px-4 py-4 rounded-lg bg-white/70 hover:bg-white/80 transition text-gray-900 dark:text-gray-100 placeholder-gray-800 dark:placeholder-gray-100 ${
+                                        error ? "border-b-[3px] border-b-red-700" : ""
+                                    } ${success ? "border-b-[3px] border-b-green-700" : ""} focus:outline-none focus:shadow-outline`}
                                     placeholder="Password"
                                     autoComplete="off"
                                 />
