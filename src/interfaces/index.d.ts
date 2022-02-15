@@ -37,3 +37,7 @@ export interface OpenViewCalendarProps {
     open: boolean;
     openCalendar: boolean;
 }
+export interface OpenViewPanelProps {
+    onClick: () => void;
+    open: boolean;
+}

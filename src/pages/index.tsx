@@ -19,7 +19,7 @@ export default function Home() {
     }, []);
     return (
         <>
-            <div className="flex flex-col justify-between backdrop-blur-lg" onClick={() => router.push("/login")}>
+            <div className="flex flex-col bg-black/10 justify-between backdrop-blur-lg" onClick={() => router.push("/login")}>
                 <main className="flex flex-col justify-center min-h-screen items-center w-full h-full">
                     <Transition
                         show={startWindows}
