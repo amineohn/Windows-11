@@ -1,4 +1,4 @@
-import { Tags } from "@/interfaces";
+import { Tags } from "@/types";
 
 export default function MetaTags({ metaData }: { metaData: Tags }) {
     return (
