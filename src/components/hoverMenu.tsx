@@ -6,10 +6,11 @@ interface HoverMenuProps {
     open: boolean;
     onClick: () => void;
     isImage: boolean;
-    icon: ReactNode;
+    icon: any;
     className: string;
+    action: string;
 }
-const HoverMenu = ({ open, onClick, icon, className, isImage }: HoverMenuProps) => {
+const HoverMenu = ({ open, onClick, icon, className, isImage, action }: HoverMenuProps) => {
     return (
         <Transition
             show={open}
@@ -22,7 +23,7 @@ const HoverMenu = ({ open, onClick, icon, className, isImage }: HoverMenuProps) 
             <div
                 onClick={onClick}
                 className={`${open ? "bg-white/10" : ""} flex flex-col justify-center items-center w-10 h-10 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md`}>
-                {isImage ? <Icons icon={icon} className={className} /> : icon}
+                {isImage ? <Icons icon={icon} className={className} action={action} /> : icon}
                 {open ? <div className="w-2 h-0.5 rounded-full bg-white/40 mt-0.5" /> : ""}
             </div>
         </Transition>

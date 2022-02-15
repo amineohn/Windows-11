@@ -20,7 +20,7 @@ export default function Home() {
                             open={openSpotify}
                             onClick={() => setOpenSpotify(false)}
                             title="Spotify"
-                            icon={<Icons icon="spotify" className="w-5 h-5 mr-2 " />}
+                            icon={<Icons icon="spotify" className="w-5 h-5 mr-2" onClick={() => null} action={""} />}
                             content={<div className="px-3 py-3 text-white">Not finished yet.</div>}
                         />
                     </div>
@@ -42,7 +42,7 @@ export default function Home() {
                                         <div>
                                             <div className="flex justify-start items-start">
                                                 <div className="ml-4">
-                                                    <Icons icon="searching" className="absolute mt-3 w-4 h-4" />
+                                                    <Icons icon="searching" className="absolute mt-3 w-4 h-4" onClick={() => null} action={""} />
                                                 </div>
                                             </div>
                                             <input
@@ -75,32 +75,32 @@ export default function Home() {
                                             </div>
                                             <div className="flex justify-center items-center mt-10">
                                                 <div className="flex items-center justify-center">
-                                                    <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" />} title="Spotify" />
-                                                    <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" />} title="Twitter" />
-                                                    <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" />} title="Settings" />
-                                                    <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" />} title="Mail" />
-                                                    <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" />} title="Xbox" />
-                                                    <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" />} title="Photos" />
+                                                    <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" onClick={() => null} action={""} />} title="Spotify" />
+                                                    <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" onClick={() => null} action={""} />} title="Twitter" />
+                                                    <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" onClick={() => null} action={""} />} title="Settings" />
+                                                    <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" onClick={() => null} action={""} />} title="Mail" />
+                                                    <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" onClick={() => null} action={""} />} title="Xbox" />
+                                                    <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" onClick={() => null} action={""} />} title="Photos" />
                                                 </div>
                                             </div>
                                             <div className="flex justify-center items-center mt-7">
                                                 <div className="flex items-center justify-center">
-                                                    <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" />} title="Spotify" />
-                                                    <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" />} title="Twitter" />
-                                                    <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" />} title="Settings" />
-                                                    <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" />} title="Mail" />
-                                                    <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" />} title="Xbox" />
-                                                    <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" />} title="Photos" />
+                                                    <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" onClick={() => null} action={""} />} title="Spotify" />
+                                                    <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" onClick={() => null} action={""} />} title="Twitter" />
+                                                    <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" onClick={() => null} action={""} />} title="Settings" />
+                                                    <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" onClick={() => null} action={""} />} title="Mail" />
+                                                    <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" onClick={() => null} action={""} />} title="Xbox" />
+                                                    <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" onClick={() => null} action={""} />} title="Photos" />
                                                 </div>
                                             </div>
                                             <div className="flex justify-center items-center mt-7">
                                                 <div className="flex items-center justify-center">
-                                                    <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" />} title="Spotify" />
-                                                    <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" />} title="Twitter" />
-                                                    <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" />} title="Settings" />
-                                                    <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" />} title="Mail" />
-                                                    <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" />} title="Xbox" />
-                                                    <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" />} title="Photos" />
+                                                    <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" onClick={() => null} action={""} />} title="Spotify" />
+                                                    <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" onClick={() => null} action={""} />} title="Twitter" />
+                                                    <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" onClick={() => null} action={""} />} title="Settings" />
+                                                    <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" onClick={() => null} action={""} />} title="Mail" />
+                                                    <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" onClick={() => null} action={""} />} title="Xbox" />
+                                                    <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" onClick={() => null} action={""} />} title="Photos" />
                                                 </div>
                                             </div>
                                             <div className="w-[536px] h-[204px] mt-5">
@@ -138,10 +138,10 @@ export default function Home() {
                                                                 <div
                                                                     onClick={() => setStartMenu(false)}
                                                                     className="w-10 h-10 flex justify-center items-center hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                    <Icons icon="poweroff" className="w-5 h-5 text-white" />
+                                                                    <Icons icon="poweroff" className="w-5 h-5 text-white" onClick={() => null} action={""} />
                                                                 </div>
                                                                 <div className="w-10 h-10 flex justify-center items-center hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                    <Icons icon="setting" className="w-5 h-5 text-white" />
+                                                                    <Icons icon="setting" className="w-5 h-5 text-white" onClick={() => null} action={""} />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -157,7 +157,11 @@ export default function Home() {
                 </main>
 
                 <div className="absolute px-4 py-4">
-                    <OpenWindow onClick={() => (openSpotify ? setOpenSpotify(false) : setOpenSpotify(true))} icon={<Icons icon="spotify" className="w-12 h-12" />} title="Spotify" />
+                    <OpenWindow
+                        onClick={() => (openSpotify ? setOpenSpotify(false) : setOpenSpotify(true))}
+                        icon={<Icons icon="spotify" className="w-12 h-12" onClick={() => null} action={""} />}
+                        title="Spotify"
+                    />
                 </div>
                 <div className="bg-neutral-900/80 backdrop-blur-xl py-1 sticky bottom-0">
                     <div className="flex justify-between items-center">
@@ -172,17 +176,18 @@ export default function Home() {
                                     />
                                 </>
                             ) : (
-                                <Icons icon="start" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => setStartMenu(true)} />
+                                <Icons icon="start" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => setStartMenu(true)} action={""} />
                             )}
-                            <Icons icon="teams" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" />
-                            <Icons icon="explorer" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" />
-                            <Icons icon="edge" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" />
+                            <Icons icon="teams" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => null} action={""} />
+                            <Icons icon="explorer" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => null} action={""} />
+                            <Icons icon="edge" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => null} action={""} />
                             <HoverMenu
                                 open={openSpotify}
                                 onClick={() => setOpenSpotify((openSpotify) => !openSpotify)}
-                                icon={<Icons icon="spotify" className="w-6 h-6" />}
+                                icon={<Icons icon="spotify" className="w-6 h-6" onClick={() => null} action={""} />}
                                 className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300"
                                 isImage={false}
+                                action={""}
                             />
                         </div>
                         <div className="flex items-center justify-end px-2">
