@@ -1,3 +1,4 @@
+import HoverMenu from "@/components/hoverMenu";
 import Icons from "@/components/Icons";
 import MenuIcon from "@/components/menuIcon";
 import OpenWindow from "@/components/openWindow";
@@ -31,7 +32,7 @@ export default function Home() {
                         enterTo="opacity-100 duration-500 slide-in-bottom"
                         leave="transition-all duration-500  slide-out-bottom"
                         leaveFrom="opacity-100  duration-500 slide-out-bottom"
-                        className="flex absolute items-center justify-center mt-10 mr-10 w-full h-full"
+                        className="flex absolute items-center justify-center mt-20 w-full h-full"
                         leaveTo="opacity-0 duration-500  slide-out-bottom">
                         <>
                             <div className="absolute w-full h-full" onClick={() => setStartMenu(false)}></div>
@@ -40,14 +41,14 @@ export default function Home() {
                                     <div className="space-y-8">
                                         <div>
                                             <div className="flex justify-start items-start">
-                                                <div className="ml-2">
+                                                <div className="ml-4">
                                                     <Icons icon="searching" className="absolute mt-3 w-4 h-4" />
                                                 </div>
                                             </div>
                                             <input
                                                 type="text"
                                                 placeholder="Type here to search"
-                                                className="w-full h-10 px-8 py-4 rounded-[0.250rem] bg-neutral-900 text-gray-100 placeholder-gray-100 border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 border-b-rose-700 focus:outline-none focus:shadow-outline"
+                                                className="w-full h-10 px-12 py-4 rounded-[0.250rem] text-light bg-neutral-900 text-gray-300 placeholder-gray-300 border-b-[3px] border-r-2 border-r-neutral-800 border-l-2 border-l-neutral-800 border-t-2 border-t-neutral-800 border-b-rose-700 focus:outline-none focus:shadow-outline"
                                             />
                                         </div>
                                         <div className="w-[576px] h-[302px]">
@@ -161,10 +162,28 @@ export default function Home() {
                 <div className="bg-neutral-900/80 backdrop-blur-xl py-1 sticky bottom-0">
                     <div className="flex justify-between items-center">
                         <div className="flex justify-center items-center m-auto space-x-3">
-                            {startMenu ? <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(false)} /> : <Icons icon="start" className="w-6 h-6" onClick={() => setStartMenu(true)} />}
-                            <Icons icon="teams" className="w-6 h-6" />
-                            <Icons icon="explorer" className="w-6 h-6" />
-                            <Icons icon="edge" className="w-6 h-6" />
+                            {startMenu ? (
+                                <>
+                                    <Icons
+                                        icon="start"
+                                        className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300"
+                                        onClick={() => setStartMenu(false)}
+                                        action={startMenu ? "bg-white/10" : ""}
+                                    />
+                                </>
+                            ) : (
+                                <Icons icon="start" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => setStartMenu(true)} />
+                            )}
+                            <Icons icon="teams" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" />
+                            <Icons icon="explorer" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" />
+                            <Icons icon="edge" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" />
+                            <HoverMenu
+                                open={openSpotify}
+                                onClick={() => setOpenSpotify((openSpotify) => !openSpotify)}
+                                icon={<Icons icon="spotify" className="w-6 h-6" />}
+                                className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300"
+                                isImage={false}
+                            />
                         </div>
                         <div className="flex items-center justify-end px-2">
                             <div className="flex justify-end items-center w-20 h-10 px-2 hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
