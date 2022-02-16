@@ -62,7 +62,7 @@ export default function Home() {
                             <h1 className="text-white">{date}</h1>
                             <div className="mt-3">
                                 <button
-                                    className="bg-white/70 hover:bg-white/80 dark:bg-neutral-900/70 dark:hover:bg-neutral-900/80 transition-colors text-black dark:text-white border-t-transparent border-l-transparent border-r-transparent px-12 rounded-md py-2.5 focus:outline-none focus:shadow-outline"
+                                    className="bg-white/70 hover:bg-white/80 dark:bg-neutral-900/70 dark:hover:bg-neutral-900/80 transition-colors text-black dark:text-white border-t-transparent border-l-transparent border-r-transparent px-12 rounded-md py-2.5 focus:outline-none focus:shadow-outline shadow-2xl"
                                     onClick={() => router.push("/login")}>
                                     Login
                                 </button>
