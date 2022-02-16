@@ -30,7 +30,7 @@ export default function Home() {
                 <ContextMenu.Root>
                     <main className="flex justify-center min-h-screen items-center w-full h-full">
                         <ContextMenu.Trigger>
-                            <div className="w-screen min-h-screen z-[9999]" />
+                            <div className={`${!shutdown ? "w-screen min-h-screen z-[9999]" : ""}`} />
                         </ContextMenu.Trigger>
                         <Transition
                             show={shutdown}
