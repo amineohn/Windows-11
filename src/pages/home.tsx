@@ -204,7 +204,7 @@ export default function Home() {
                             title="Spotify"
                         />
                     </div>
-                    <div className="bg-blue-100/80 dark:bg-neutral-900/80 backdrop-filter backdrop-blur-lg py-1 sticky bottom-0">
+                    <div className="bg-blue-100/80 dark:bg-neutral-900/80 backdrop-filter backdrop-blur-lg py-1 sticky bottom-0 z-50">
                         <div className="flex justify-between items-center">
                             <div className="flex justify-center items-center m-auto space-x-3">
                                 {startMenu ? (
