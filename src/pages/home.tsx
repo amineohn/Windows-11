@@ -19,7 +19,6 @@ export default function Home() {
     const [openCalendar, setOpenCalendar] = useState(false);
     const [openViewCalendar, setOpenViewCalendar] = useState(false);
     const [openPanel, setOpenPanel] = useState(false);
-    const [shutdown, setShutdown] = useState(false);
     const router = useRouter();
     const date = format(new Date(), "dd/MM/yyyy");
     const time = format(new Date(), "HH:mm");
@@ -29,22 +28,8 @@ export default function Home() {
                 <ContextMenu.Root>
                     <main className="flex justify-center min-h-screen items-center w-full h-full">
                         <ContextMenu.Trigger>
-                            <div className={`${!shutdown ? "w-screen min-h-screen z-[9999]" : ""}`} />
+                            <div className={`${openSpotify && "w-0 h-0"} ${!openSpotify && "w-0 h-0"} w-screen min-h-screen z-[9999]`} />
                         </ContextMenu.Trigger>
-                        <Transition
-                            show={shutdown}
-                            enter="transition-opacity duration-500 ease-in"
-                            enterFrom="opacity-0"
-                            enterTo="opacity-100"
-                            leave="transition-opacity duration-500 ease-out"
-                            leaveFrom="opacity-100"
-                            leaveTo="opacity-0 duration-500"
-                            className="dark:bg-black bg-blue-200 w-screen min-h-screen z-[9999]">
-                            <div className="flex h-screen space-y-10 flex-col justify-center items-center">
-                                <div className="border-t-transparent w-36 h-36 border-4 border-black dark:border-white border-dotted rounded-full animate-spin"></div>
-                                <span className="text-2xl dark:text-white">Shutting down</span>
-                            </div>
-                        </Transition>
                         <div className="space-x-2 inline-flex z-50">
                             <Window
                                 open={openSpotify}
@@ -169,9 +154,8 @@ export default function Home() {
                                                                 <div className="flex justify-center items-center">
                                                                     <div
                                                                         onClick={() => {
-                                                                            setShutdown(true);
+                                                                            router.push("/shutdown");
                                                                             setInterval(() => {
-                                                                                setShutdown(false);
                                                                                 router.push("/");
                                                                                 localStorage.setItem("isLogged", "false");
                                                                             }, 3000);
