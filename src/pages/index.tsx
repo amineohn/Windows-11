@@ -16,7 +16,7 @@ export default function Home() {
         setInterval(() => {
             setShowLogin(true);
         }, 1501);
-        if (localStorage.getItem("isLogged")) {
+        if (localStorage.getItem("isLogged") === "true" && localStorage.getItem("password") === "password") {
             router.push("/home");
         }
     }, []);

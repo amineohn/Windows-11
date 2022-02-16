@@ -23,7 +23,6 @@ export default function Home() {
     const router = useRouter();
     const date = format(new Date(), "dd/MM/yyyy");
     const time = format(new Date(), "HH:mm");
-
     return (
         <>
             <div className="flex flex-col justify-between fade-in">
@@ -174,6 +173,7 @@ export default function Home() {
                                                                             setInterval(() => {
                                                                                 setShutdown(false);
                                                                                 router.push("/");
+                                                                                localStorage.setItem("isLogged", "false");
                                                                                 localStorage.clear();
                                                                             }, 3000);
                                                                         }}
