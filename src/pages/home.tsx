@@ -174,7 +174,6 @@ export default function Home() {
                                                                                 setShutdown(false);
                                                                                 router.push("/");
                                                                                 localStorage.setItem("isLogged", "false");
-                                                                                localStorage.clear();
                                                                             }, 3000);
                                                                         }}
                                                                         className="w-10 h-10 flex justify-center items-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
