@@ -12,11 +12,14 @@ import { useState } from "react";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import * as ContextMenu from "@radix-ui/react-context-menu";
 import { cx, Icon, Kbd } from "@vechaiui/react";
+import Teams from "@/components/teams";
 
 export default function Home() {
     const [startMenu, setStartMenu] = useState(false);
     const [openSpotify, setOpenSpotify] = useState(false);
+    const [openTerminal, setOpenTerminal] = useState(false);
     const [openCalendar, setOpenCalendar] = useState(false);
+    const [openTeams, setOpenTeams] = useState(false);
     const [openViewCalendar, setOpenViewCalendar] = useState(false);
     const [openPanel, setOpenPanel] = useState(false);
     const router = useRouter();
@@ -27,9 +30,7 @@ export default function Home() {
             <div className="flex flex-col justify-between fade-in">
                 <ContextMenu.Root>
                     <main className="flex justify-center min-h-screen items-center w-full h-full">
-                        <ContextMenu.Trigger>
-                            <div className={`${openSpotify && "w-0 h-0"} ${!openSpotify && "w-0 h-0"} w-screen min-h-screen z-[9999]`} />
-                        </ContextMenu.Trigger>
+                        <ContextMenu.Trigger></ContextMenu.Trigger>
                         <div className="space-x-2 inline-flex z-50">
                             <Window
                                 open={openSpotify}
@@ -37,6 +38,17 @@ export default function Home() {
                                 title="Spotify"
                                 icon={<Icons icon="spotify" className="w-5 h-5 mr-2" onClick={() => null} action={""} />}
                                 content={<div className="px-3 py-3 text-black dark:text-white">Not finished yet.</div>}
+                            />
+                            <Window
+                                open={openTerminal}
+                                onClick={() => setOpenTerminal(false)}
+                                title="Terminal"
+                                icon={<img src="/static/images/app/terminal.ico" className="w-5 h-5 mr-2" />}
+                                content={
+                                    <div className=" w-full h-[342px] rounded-b-lg bg-black text-black dark:text-white">
+                                        <h1 className="text-white">lolol</h1>
+                                    </div>
+                                }
                             />
                         </div>
 
@@ -179,6 +191,7 @@ export default function Home() {
                         </Transition>
                         <Calendar open={openCalendar} openCalendar={openViewCalendar} onClick={() => (openViewCalendar ? setOpenViewCalendar(false) : setOpenViewCalendar(true))} />
                         <Panel open={openPanel} onClick={() => (openPanel ? setOpenPanel(false) : setOpenPanel(true))} />
+                        <Teams open={openTeams} onClick={() => (openTeams ? setOpenTeams(false) : setOpenTeams(true))} />
                     </main>
 
                     <div className="absolute px-4 py-4">
@@ -186,6 +199,11 @@ export default function Home() {
                             onClick={() => (openSpotify ? setOpenSpotify(false) : setOpenSpotify(true))}
                             icon={<Icons icon="spotify" className="w-12 h-12" onClick={() => null} action={""} />}
                             title="Spotify"
+                        />
+                        <OpenWindow
+                            onClick={() => (openTerminal ? setOpenTerminal(false) : setOpenTerminal(true))}
+                            icon={<img src="/static/images/app/terminal.ico" className="w-12 h-12" />}
+                            title="Terminal"
                         />
                     </div>
                     <div className="bg-blue-100/80 dark:bg-neutral-900/80 backdrop-filter backdrop-blur-lg py-1 sticky bottom-0 z-50">
@@ -197,7 +215,7 @@ export default function Home() {
                                             icon="start"
                                             className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300"
                                             onClick={() => setStartMenu(false)}
-                                            action={startMenu ? "bg-white/10" : ""}
+                                            action={startMenu ? "bg-black/5 dark:bg-white/10" : ""}
                                         />
                                     </>
                                 ) : (
@@ -208,13 +226,37 @@ export default function Home() {
                                         action={""}
                                     />
                                 )}
-                                <Icons icon="teams" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => null} action={""} />
+                                {openTeams ? (
+                                    <>
+                                        <Icons
+                                            icon="teams"
+                                            className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300"
+                                            onClick={() => setOpenTeams(false)}
+                                            action={openTeams ? "bg-black/5 dark:bg-white/10" : ""}
+                                        />
+                                    </>
+                                ) : (
+                                    <Icons
+                                        icon="teams"
+                                        className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300"
+                                        onClick={() => setOpenTeams(true)}
+                                        action={""}
+                                    />
+                                )}
                                 <Icons icon="explorer" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => null} action={""} />
                                 <Icons icon="edge" className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300" onClick={() => null} action={""} />
                                 <HoverMenu
                                     open={openSpotify}
                                     onClick={() => setOpenSpotify((openSpotify) => !openSpotify)}
                                     icon={<Icons icon="spotify" className="w-6 h-6" onClick={() => null} action={""} />}
+                                    className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300"
+                                    isImage={false}
+                                    action={""}
+                                />
+                                <HoverMenu
+                                    open={openTerminal}
+                                    onClick={() => setOpenTerminal((openTerminal) => !openTerminal)}
+                                    icon={<img src="/static/images/app/terminal.ico" className="w-6 h-6" />}
                                     className="w-6 h-6 hover:scale-[0.80] hover:transition hover:transform ease-in-out duration-300"
                                     isImage={false}
                                     action={""}

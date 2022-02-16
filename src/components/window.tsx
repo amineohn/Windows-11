@@ -13,7 +13,7 @@ const Window = ({ open, onClick, title, icon, content }: WindowProps) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0 duration-500 scale-out-bottom">
             <Draggable>
-                <div className="group w-[550px] h-96 bg-white dark:bg-neutral-900 shadow-lg border border-gray-50 dark:border-neutral-800 rounded-md">
+                <div className="group w-[600px] h-96 bg-white dark:bg-neutral-900 shadow-lg border border-gray-50 dark:border-neutral-800 rounded-md">
                     <div className="bg-white dark:bg-neutral-900 rounded-tl-md rounded-tr-md px-2 py-2 h-10">
                         <div className="flex items-center justify-between">
                             <h1 className="inline-flex justify-center items-center text-black dark:text-[#F1F1F1]">

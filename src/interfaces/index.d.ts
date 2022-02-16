@@ -41,3 +41,7 @@ export interface OpenViewPanelProps {
     onClick: () => void;
     open: boolean;
 }
+export interface OpenTeamsProps {
+    onClick: () => void;
+    open: boolean;
+}
