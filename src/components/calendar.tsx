@@ -1,10 +1,17 @@
 import { OpenViewCalendarProps } from "@/interfaces";
 import { Transition } from "@headlessui/react";
-import { format } from "date-fns";
+import { format, isValid } from "date-fns";
 
 const Calendar = ({ open, openCalendar, onClick }: OpenViewCalendarProps) => {
     const date = format(new Date(), "EEEE, MMMM dd");
-
+    const month = format(new Date(), "MMMM");
+    const year = format(new Date(), "yyyy");
+    const array = [
+        {
+            name: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+            isValid: true,
+        },
+    ];
     return (
         <Transition
             show={open}
@@ -40,7 +47,9 @@ const Calendar = ({ open, openCalendar, onClick }: OpenViewCalendarProps) => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0">
                 <div className="flex justify-center items-center gap-3 px-6 pt-4">
-                    <span className="text-gray-700 dark:text-white text-sm flex-grow">February 2022</span>
+                    <span className="text-gray-700 dark:text-white text-sm flex-grow">
+                        {month} {year}
+                    </span>
 
                     <button className="flex justify-center items-center hover:bg-gray-600 hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10 rounded-md duration-150">
                         <svg width="24" height="24" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="fill-current text-gray-600 dark:text-gray-400 p-2">
@@ -62,11 +71,12 @@ const Calendar = ({ open, openCalendar, onClick }: OpenViewCalendarProps) => {
                         <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Th </div>
                         <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Fr </div>
                         <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Sa </div>
-                        <div className="flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-400 dark:text-gray-500"> 30 </div>
-                        <div className="flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-400 dark:text-gray-500"> 31 </div>
-                        <div className="flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-600 bg-transparent hover:bg-gray-600 hover:bg-opacity-10 dark:text-gray-300 dark:hover:bg-white dark:hover:bg-opacity-10">
-                            1
-                        </div>
+                        {array[0].name.map((i) => (
+                            <button
+                                className={`flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-600 bg-transparent focus:text-white dark:focus:bg-sky-400 focus:bg-[#0067c0] hover:bg-opacity-10 dark:text-gray-300 dark:hover:bg-white dark:hover:bg-opacity-10`}>
+                                {i}
+                            </button>
+                        ))}
                     </div>
                 ) : null}
             </Transition>

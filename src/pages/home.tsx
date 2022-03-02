@@ -33,20 +33,25 @@ export default function Home() {
                         <ContextMenu.Trigger></ContextMenu.Trigger>
                         <div className="space-x-2 inline-flex z-50">
                             <Window
-                                open={openSpotify}
-                                onClick={() => setOpenSpotify(false)}
-                                title="Spotify"
-                                icon={<Icons icon="spotify" className="w-5 h-5 mr-2" onClick={() => null} action={""} />}
-                                content={<div className="px-3 py-3 text-black dark:text-white">Not finished yet.</div>}
-                            />
-                            <Window
                                 open={openTerminal}
                                 onClick={() => setOpenTerminal(false)}
-                                title="Terminal"
-                                icon={<img src="/static/images/app/terminal.ico" className="w-5 h-5 mr-2" />}
+                                title="Windows PowerShell"
+                                icon={<img src="/static/images/app/terminal.ico" className="w-4 h-4 mr-2" />}
                                 content={
-                                    <div className=" w-full h-[342px] rounded-b-lg bg-black text-black dark:text-white">
-                                        <h1 className="text-white">lolol</h1>
+                                    <div className=" w-full h-[342px] rounded-b-lg bg-[#0a0a0a] text-black dark:text-white">
+                                        <div className="py-2 px-2">
+                                            <h2>Windows PowerShell</h2>
+                                            <h2>Copyright (C) Microsoft Corporation. All rights reserved.</h2>
+                                        </div>
+                                        <div className="py-4 px-2">
+                                            <h2>Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows</h2>
+                                        </div>
+                                        <div className="py-4 px-2">
+                                            <div className="inline-flex space-x-3">
+                                                <h2>PS C:\Users\User&gt; </h2>
+                                                <input type="text" className="bg-transparent focus:outline-none" />
+                                            </div>
+                                        </div>
                                     </div>
                                 }
                             />
@@ -195,11 +200,6 @@ export default function Home() {
                     </main>
 
                     <div className="absolute px-4 py-4">
-                        <OpenWindow
-                            onClick={() => (openSpotify ? setOpenSpotify(false) : setOpenSpotify(true))}
-                            icon={<Icons icon="spotify" className="w-12 h-12" onClick={() => null} action={""} />}
-                            title="Spotify"
-                        />
                         <OpenWindow
                             onClick={() => (openTerminal ? setOpenTerminal(false) : setOpenTerminal(true))}
                             icon={<img src="/static/images/app/terminal.ico" className="w-12 h-12" />}
