@@ -200,7 +200,7 @@ export default function Home() {
                     </main>
 
                     <div className="absolute px-4 py-4">
-                        <OpenWindow onClick={() => router.push("/error")} icon={<Icons icon="spotify" className="w-12 h-12" onClick={() => null} action={""} />} title="Spotify" />
+                        <OpenWindow onClick={() => router.push("/woops")} icon={<Icons icon="spotify" className="w-12 h-12" onClick={() => null} action={""} />} title="Spotify" />
                         <OpenWindow
                             onClick={() => (openTerminal ? setOpenTerminal(false) : setOpenTerminal(true))}
                             icon={<img src="/static/images/app/terminal.ico" className="w-12 h-12" />}
