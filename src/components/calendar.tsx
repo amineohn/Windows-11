@@ -1,6 +1,6 @@
 import { OpenViewCalendarProps } from "@/interfaces";
 import { Transition } from "@headlessui/react";
-import { format, isValid } from "date-fns";
+import { format } from "date-fns";
 
 const Calendar = ({ open, openCalendar, onClick }: OpenViewCalendarProps) => {
     const date = format(new Date(), "EEEE, MMMM dd");
@@ -71,9 +71,10 @@ const Calendar = ({ open, openCalendar, onClick }: OpenViewCalendarProps) => {
                         <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Th </div>
                         <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Fr </div>
                         <div className="flex justify-center items-center text-xs text-gray-600 dark:text-gray-100"> Sa </div>
-                        {array[0].name.map((i) => (
+                        {array[0].name.map((i, index) => (
                             <button
-                                className={`flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-600 bg-transparent focus:text-white dark:focus:bg-sky-400 focus:bg-[#0067c0] hover:bg-opacity-10 dark:text-gray-300 dark:hover:bg-white dark:hover:bg-opacity-10`}>
+                                key={index}
+                                className={`flex justify-center items-center text-sm rounded-full w-8 h-8 duration-150 text-gray-600 bg-transparent focus:text-white dark:focus:bg-[#d47f6b] focus:bg-[#0067c0] hover:bg-opacity-10 dark:text-gray-300 dark:hover:bg-white dark:hover:bg-opacity-10`}>
                                 {i}
                             </button>
                         ))}

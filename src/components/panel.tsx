@@ -17,7 +17,7 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                 <div className="grid grid-cols-1 space-y-5">
                     <div className="inline-flex items-center justify-center space-x-2 w-full">
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-sky-400 focus:bg-[#0067c0] focus:outline-none">
+                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-[#d47f6b] focus:bg-[#0067c0] focus:outline-none">
                                 <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-2 space-x-5">
                                         <div>
@@ -44,7 +44,7 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                             <span className="text-center text-black dark:text-white font-normal text-sm">WIFI</span>
                         </div>
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-sky-400 focus:bg-[#0067c0] focus:outline-none">
+                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-[#d47f6b] focus:bg-[#0067c0] focus:outline-none">
                                 <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
@@ -62,7 +62,7 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                             <span className="text-center text-black dark:text-white font-normal text-sm">Bluetooth</span>
                         </div>
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-sky-400 focus:bg-[#0067c0] focus:outline-none">
+                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-[#d47f6b] focus:bg-[#0067c0] focus:outline-none">
                                 <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
@@ -82,7 +82,7 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                     </div>
                     <div className="inline-flex items-center justify-center space-x-2 w-full">
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-sky-400 focus:bg-[#0067c0] focus:outline-none">
+                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-[#d47f6b] focus:bg-[#0067c0] focus:outline-none">
                                 <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
@@ -104,7 +104,7 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                             <span className="text-center text-black dark:text-white font-normal text-sm">Theme</span>
                         </div>
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-sky-400 focus:bg-[#0067c0] focus:outline-none">
+                            <button className="w-[98px] h-[50px] rounded-md bg-white/100 dark:bg-neutral-600/60 text-black dark:text-white transition hover:bg-white/90 dark:hover:bg-neutral-600/80 focus:text-white border border-gray-300 dark:border-neutral-600 dark:focus:bg-[#d47f6b] focus:bg-[#0067c0] focus:outline-none">
                                 <div className="flex justify-center items-center my-[1rem]">
                                     <div className="grid items-center justify-center grid-cols-1 space-x-5">
                                         <div>
@@ -133,7 +133,7 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                         </button>
 
                         <div className="w-[245px] h-1.5 bg-neutral-400/70 dark:bg-neutral-300/50 rounded-lg">
-                            <div className="h-full bg-[#0067c0] dark:bg-sky-400 rounded-lg max-w-[245px]" style={{ width: "50%" }} />
+                            <div className="h-full bg-[#0067c0] dark:bg-[#d47f6b] rounded-lg max-w-[245px]" style={{ width: "50%" }} />
                         </div>
                     </div>
                     <div className="inline-flex space-x-2 items-center justify-center">
@@ -147,7 +147,7 @@ const Panel = ({ open }: OpenViewPanelProps) => {
                         </button>
 
                         <div className="w-full h-1.5 bg-neutral-400/70 dark:bg-neutral-300/50 rounded-lg">
-                            <div className="h-full bg-[#0067c0] dark:bg-sky-400 rounded-lg max-w-[287px]" style={{ width: "50%" }} />
+                            <div className="h-full bg-[#0067c0] dark:bg-[#d47f6b] rounded-lg max-w-[287px]" style={{ width: "50%" }} />
                         </div>
                         <button className="px-2 py-2 rounded-md transition hover:bg-black/5 dark:hover:bg-white/10">
                             <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">

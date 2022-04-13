@@ -80,7 +80,7 @@ export default function Home() {
                                                 <input
                                                     type="text"
                                                     placeholder="Type here to search"
-                                                    className="w-full h-10 px-12 py-4 rounded-[0.250rem] text-light bg-blue-100 dark:bg-neutral-900 text-gray-800 dark:text-gray-300 placeholder-gray-800 dark:placeholder-gray-300 border-b-[3px] border-r-2 border-r-blue-200/50 dark:border-r-neutral-800 border-l-2 border-l-blue-200/50 border-t-2 border-t-blue-200/50 dark:border-r-blue-200/50 dark:border-l-neutral-800 dark:border-t-neutral-800 border-b-[#0067c0] dark:border-b-sky-400 focus:outline-none focus:shadow-outline"
+                                                    className="w-full h-10 px-12 py-4 rounded-[0.250rem] text-light bg-blue-100 dark:bg-neutral-900 text-gray-800 dark:text-gray-300 placeholder-gray-800 dark:placeholder-gray-300 border-b-[3px] border-r-2 border-r-blue-200/50 dark:border-r-neutral-800 border-l-2 border-l-blue-200/50 border-t-2 border-t-blue-200/50 dark:border-r-blue-200/50 dark:border-l-neutral-800 dark:border-t-neutral-800 border-b-[#0067c0] dark:border-b-[#d47f6b] focus:outline-none focus:shadow-outline"
                                                 />
                                             </div>
                                             <div className="w-[576px] h-[302px]">
