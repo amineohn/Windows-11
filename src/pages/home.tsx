@@ -61,11 +61,12 @@ export default function Home() {
                             show={startMenu}
                             enter="transition-opacity duration-500 ease-in slide-in-bottom"
                             enterFrom="opacity-0"
-                            enterTo="opacity-100 duration-500 slide-in-bottom"
-                            leave="transition-all duration-500 slide-out-bottom"
-                            leaveFrom="opacity-100  duration-500 slide-out-bottom"
-                            className="flex absolute items-center justify-center mt-0 md:mt-0 lg:mt-28 w-full h-full"
-                            leaveTo="opacity-0 duration-500 slide-out-bottom">
+                            enterTo="opacity-500 slide-in-bottom"
+                            leave="transition-all"
+                            leaveFrom="opacity-500 slide-out-bottom"
+                            leaveTo="opacity-0 duration-500 slide-out-bottom"
+                            className="fixed bottom-0 my-16 w-[642px] h-[726px] bg-neutral-900/70 backdrop-blur-3xl rounded-lg shadow-lg"
+                        >
                             <>
                                 <div className="absolute w-full h-full" onClick={() => setStartMenu(false)}></div>
                                 <div className="w-[642px] h-[726px] bg-blue-200 dark:bg-neutral-900 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg">
@@ -80,7 +81,7 @@ export default function Home() {
                                                 <input
                                                     type="text"
                                                     placeholder="Type here to search"
-                                                    className="w-full h-10 px-12 py-4 rounded-[0.250rem] text-light bg-blue-100 dark:bg-neutral-900 text-gray-800 dark:text-gray-300 placeholder-gray-800 dark:placeholder-gray-300 border-b-[3px] border-r-2 border-r-blue-200/50 dark:border-r-neutral-800 border-l-2 border-l-blue-200/50 border-t-2 border-t-blue-200/50 dark:border-r-blue-200/50 dark:border-l-neutral-800 dark:border-t-neutral-800 border-b-[#0067c0] dark:border-b-[#d47f6b] focus:outline-none focus:shadow-outline"
+                                                    className="w-full text-sm h-10 px-12 py-4 rounded-[0.250rem] text-light bg-blue-100 dark:bg-neutral-900 text-gray-800 dark:text-gray-300 placeholder-gray-800 dark:placeholder-gray-300 border-b-[3px] border-r-2 border-r-blue-200/50 dark:border-r-neutral-800 border-l-2 border-l-blue-200/50 border-t-2 border-t-blue-200/50 dark:border-r-blue-200/50 dark:border-l-neutral-800 dark:border-t-neutral-800 border-b-[#0067c0] dark:border-b-[#d47f6b] focus:outline-none focus:shadow-outline"
                                                 />
                                             </div>
                                             <div className="w-[576px] h-[302px]">
@@ -107,32 +108,32 @@ export default function Home() {
                                                 </div>
                                                 <div className="flex justify-center items-center mt-10">
                                                     <div className="flex items-center justify-center">
-                                                        <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" onClick={() => null} action={""} />} title="Spotify" />
-                                                        <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" onClick={() => null} action={""} />} title="Twitter" />
-                                                        <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" onClick={() => null} action={""} />} title="Settings" />
-                                                        <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" onClick={() => null} action={""} />} title="Mail" />
-                                                        <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" onClick={() => null} action={""} />} title="Xbox" />
-                                                        <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" onClick={() => null} action={""} />} title="Photos" />
+                                                        <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
+                                                        <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
+                                                        <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
+                                                        <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
+                                                        <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
+                                                        <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
                                                     </div>
                                                 </div>
                                                 <div className="flex justify-center items-center mt-7">
                                                     <div className="flex items-center justify-center">
-                                                        <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" onClick={() => null} action={""} />} title="Spotify" />
-                                                        <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" onClick={() => null} action={""} />} title="Twitter" />
-                                                        <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" onClick={() => null} action={""} />} title="Settings" />
-                                                        <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" onClick={() => null} action={""} />} title="Mail" />
-                                                        <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" onClick={() => null} action={""} />} title="Xbox" />
-                                                        <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" onClick={() => null} action={""} />} title="Photos" />
+                                                        <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
+                                                        <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
+                                                        <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
+                                                        <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
+                                                        <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
+                                                        <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
                                                     </div>
                                                 </div>
                                                 <div className="flex justify-center items-center mt-7">
                                                     <div className="flex items-center justify-center">
-                                                        <MenuIcon icon={<Icons icon="spotify" className="w-9 h-9" onClick={() => null} action={""} />} title="Spotify" />
-                                                        <MenuIcon icon={<Icons icon="twitter" className="w-9 h-9" onClick={() => null} action={""} />} title="Twitter" />
-                                                        <MenuIcon icon={<Icons icon="settings" className="w-9 h-9" onClick={() => null} action={""} />} title="Settings" />
-                                                        <MenuIcon icon={<Icons icon="mail" className="w-9 h-9" onClick={() => null} action={""} />} title="Mail" />
-                                                        <MenuIcon icon={<Icons icon="xbox" className="w-9 h-9" onClick={() => null} action={""} />} title="Xbox" />
-                                                        <MenuIcon icon={<Icons icon="photos" className="w-9 h-9" onClick={() => null} action={""} />} title="Photos" />
+                                                        <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
+                                                        <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
+                                                        <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
+                                                        <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
+                                                        <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
+                                                        <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
                                                     </div>
                                                 </div>
                                                 <div className="w-[536px] h-[204px] mt-5">
@@ -166,7 +167,7 @@ export default function Home() {
                                                             <div className="flex justify-evenly	space-x-60 mt-0.5">
                                                                 <div className="w-[120px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-black/5 dark:hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
                                                                     <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" alt="me" />
-                                                                    <span className="text-black/90 dark:text-white/90 font-medium">Amine</span>
+                                                                    <span className="text-black/90 dark:text-white/90 font-medium text-sm">Amine</span>
                                                                 </div>
                                                                 <div className="flex justify-center items-center">
                                                                     <div
@@ -203,13 +204,13 @@ export default function Home() {
                         <OpenWindow onClick={() => router.push("/woops")} icon={<Icons icon="spotify" className="w-12 h-12" onClick={() => null} action={""} />} title="Spotify" />
                         <OpenWindow
                             onClick={() => (openTerminal ? setOpenTerminal(false) : setOpenTerminal(true))}
-                            icon={<img src="/static/images/app/terminal.ico" className="w-12 h-12" />}
+                            icon={<img src="/static/images/app/terminal.ico" className="w-10 h-10" />}
                             title="Terminal"
                         />
                     </div>
-                    <div className="bg-blue-100/80 dark:bg-neutral-900/80 backdrop-filter backdrop-blur-lg py-1 sticky bottom-0 z-50">
-                        <div className="flex justify-between items-center">
-                            <div className="flex justify-center items-center m-auto space-x-3">
+                    <div className="bg-blue-100/80 dark:bg-neutral-900/80 backdrop-blur-3xl py-1 sticky bottom-0 z-5">
+                        <div className="flex justify-center items-center">
+                            <div className="flex justify-center items-center space-x-2">
                                 {startMenu ? (
                                     <>
                                         <Icons
@@ -263,7 +264,7 @@ export default function Home() {
                                     action={""}
                                 />
                             </div>
-                            <div className="flex items-center justify-end px-2">
+                            <div className="flex items-center justify-end px-2 space-x-1 right-0 fixed">
                                 {openPanel ? (
                                     <div
                                         onClick={() => setOpenPanel(false)}
@@ -328,112 +329,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <ContextMenu.Content
-                        className={cx(
-                            "z-40 w-56 min-w-max py-3 px-3 rounded-lg shadow-sm outline-none",
-                            "backdrop-blur-lg bg-white/80 border border-gray-200",
-                            "backdrop-blur-lg dark:bg-neutral-800/80 dark:border-gray-700"
-                        )}
-                        alignOffset={-5}>
-                        <ContextMenu.Item
-                            className={cx(
-                                "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                "focus:bg-white/30 rounded-md",
-                                "dark:focus:bg-neutral-700/40 rounded-md"
-                            )}>
-                            {/* Icon */}
 
-                            <span className="flex-1 mr-2">Fullscreen</span>
-                            <Kbd>⌘F</Kbd>
-                        </ContextMenu.Item>
-                        <ContextMenu.Item
-                            className={cx(
-                                "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                "focus:bg-white/30 rounded-md",
-                                "dark:focus:bg-neutral-700/40 rounded-md"
-                            )}>
-                            {/* Icon */}
-
-                            <span className="flex-1 mr-2">Copy</span>
-                            <Kbd>⌘⇧C</Kbd>
-                        </ContextMenu.Item>
-                        <ContextMenu.Item
-                            className={cx(
-                                "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                "focus:bg-white/30 rounded-md",
-                                "dark:focus:bg-neutral-700/40 rounded-md"
-                            )}>
-                            {/* Icon */}
-
-                            <span className="flex-1 mr-2">Share</span>
-                        </ContextMenu.Item>
-                        <ContextMenu.Separator className="h-px my-1 bg-neutral-200 dark:bg-neutral-700" />
-                        <ContextMenu.Item
-                            className={cx(
-                                "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                "focus:bg-white/30 rounded-md",
-                                "dark:focus:bg-neutral-700/40 rounded-md"
-                            )}>
-                            {/* Icon */}
-
-                            <span className="flex-1 mr-2">Due Date</span>
-                            <Kbd>⌘D</Kbd>
-                        </ContextMenu.Item>
-
-                        <ContextMenu.Root>
-                            <ContextMenu.TriggerItem
-                                className={cx(
-                                    "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                    "focus:bg-white/30 rounded-md",
-                                    "dark:focus:bg-neutral-700/40 rounded-md"
-                                )}>
-                                {/* Icon */}
-                                <span className="flex-1 mr-2">Labels</span>
-                                <Icon as={ChevronRightIcon} label="chevron-right" className="w-3 h-3 ml-2" />
-                            </ContextMenu.TriggerItem>
-                            <ContextMenu.Content
-                                className={cx("z-40 w-48 min-w-max py-1 rounded-md shadow-sm outline-none", "bg-white border border-gray-200", "dark:bg-neutral-800 dark:border-gray-700")}
-                                sideOffset={5}
-                                alignOffset={-5}>
-                                <ContextMenu.Item
-                                    className={cx(
-                                        "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                        "focus:bg-neutral-100 dark:focus:bg-neutral-700"
-                                    )}>
-                                    {/* Icon */}
-                                    <span className="w-2 h-2 mr-4 bg-red-500 rounded-full" />
-                                    Bug
-                                </ContextMenu.Item>
-                                <ContextMenu.Item
-                                    className={cx(
-                                        "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                        "focus:bg-neutral-100 dark:focus:bg-neutral-700"
-                                    )}>
-                                    {/* Icon */}
-                                    <span className="w-2 h-2 mr-4 bg-purple-500 rounded-full" />
-                                    Feature
-                                </ContextMenu.Item>
-                                <ContextMenu.Item
-                                    className={cx(
-                                        "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                        "focus:bg-neutral-100 dark:focus:bg-neutral-700"
-                                    )}>
-                                    {/* Icon */}
-                                    <span className="w-2 h-2 mr-4 bg-blue-500 rounded-full" />
-                                    Improvement
-                                </ContextMenu.Item>
-                            </ContextMenu.Content>
-                        </ContextMenu.Root>
-                        <ContextMenu.Item
-                            className={cx(
-                                "flex items-center w-full px-3 h-8 flex-shrink-0 text-sm text-left cursor-base focus:outline-none",
-                                "focus:bg-white/30 rounded-md",
-                                "dark:focus:bg-neutral-700/40 rounded-md"
-                            )}>
-                            <span className="flex-1 mr-2">Unsubscribe</span>
-                            <Kbd>⌘⇧U</Kbd>
-                        </ContextMenu.Item>
-                    </ContextMenu.Content>
                 </ContextMenu.Root>
             </div>
         </>
