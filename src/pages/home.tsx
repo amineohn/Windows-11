@@ -65,34 +65,82 @@ export default function Home() {
                             leave="transition-all"
                             leaveFrom="opacity-500 slide-out-bottom"
                             leaveTo="opacity-0 duration-500 slide-out-bottom"
-                            className="fixed bottom-0 my-16 w-[642px] h-[726px] bg-neutral-900/70 backdrop-blur-3xl rounded-lg shadow-lg"
-                        >
-                            <>
-                                <div className="absolute w-full h-full" onClick={() => setStartMenu(false)}></div>
-                                <div className="w-[642px] h-[726px] bg-blue-200 dark:bg-neutral-900 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg">
-                                    <div className="px-10 py-10">
-                                        <div className="space-y-8">
-                                            <div>
-                                                <div className="flex justify-start items-start">
-                                                    <div className="ml-4">
-                                                        <Icons icon="searching" className="absolute mt-3 w-4 h-4" onClick={() => null} action={""} />
-                                                    </div>
+                            className="fixed bottom-0 my-16 w-[642px] h-[726px] bg-neutral-900/70 backdrop-blur-3xl rounded-lg shadow-lg">
+                            <div className="absolute w-full h-full" onClick={() => setStartMenu(false)}></div>
+                            <div className="w-[642px] h-[726px] bg-blue-200 dark:bg-neutral-900 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg">
+                                <div className="px-10 py-10">
+                                    <div className="space-y-8">
+                                        <div>
+                                            <div className="flex justify-start items-start">
+                                                <div className="ml-4">
+                                                    <Icons icon="searching" className="absolute mt-3 w-4 h-4" onClick={() => null} action={""} />
                                                 </div>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Type here to search"
-                                                    className="w-full text-sm h-10 px-12 py-4 rounded-[0.250rem] text-light bg-blue-100 dark:bg-neutral-900 text-gray-800 dark:text-gray-300 placeholder-gray-800 dark:placeholder-gray-300 border-b-[3px] border-r-2 border-r-blue-200/50 dark:border-r-neutral-800 border-l-2 border-l-blue-200/50 border-t-2 border-t-blue-200/50 dark:border-r-blue-200/50 dark:border-l-neutral-800 dark:border-t-neutral-800 border-b-[#0067c0] dark:border-b-[#d47f6b] focus:outline-none focus:shadow-outline"
-                                                />
                                             </div>
-                                            <div className="w-[576px] h-[302px]">
+                                            <input
+                                                type="text"
+                                                placeholder="Type here to search"
+                                                className="w-full text-sm h-10 px-12 py-4 rounded-[0.250rem] text-light bg-blue-100 dark:bg-neutral-900 text-gray-800 dark:text-gray-300 placeholder-gray-800 dark:placeholder-gray-300 border-b-[3px] border-r-2 border-r-blue-200/50 dark:border-r-neutral-800 border-l-2 border-l-blue-200/50 border-t-2 border-t-blue-200/50 dark:border-r-blue-200/50 dark:border-l-neutral-800 dark:border-t-neutral-800 border-b-[#0067c0] dark:border-b-[#d47f6b] focus:outline-none focus:shadow-outline"
+                                            />
+                                        </div>
+                                        <div className="w-[576px] h-[302px]">
+                                            <div className="flex justify-between">
+                                                <div>
+                                                    <h1 className="text-black/90 dark:text-white/90 font-medium">Pinned</h1>
+                                                </div>
+                                                <div className="hidden">
+                                                    <button className="bg-white px-3 py-1 rounded-lg border-2 border-gray-300">
+                                                        <div className="inline-flex justify-start items-center">
+                                                            <span className="text-white/90 font-medium">All apps</span>
+                                                            <div className="w-[10px] h-[22px] flex justify-center items-center ml-2">
+                                                                <svg className="w-3 h-3" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M0.125977 7.4375C0.125977 7.35286 0.156901 7.27962 0.21875 7.21777L3.43164 4L0.21875 0.782227C0.156901 0.720378 0.125977 0.647135 0.125977 0.5625C0.125977 0.477865 0.156901 0.404622 0.21875 0.342773C0.280599 0.280924 0.353841 0.25 0.438477 0.25C0.523112 0.25 0.596354 0.280924 0.658203 0.342773L4.0957 3.78027C4.15755 3.84212 4.18848 3.91536 4.18848 4C4.18848 4.08464 4.15755 4.15788 4.0957 4.21973L0.658203 7.65723C0.596354 7.71908 0.523112 7.75 0.438477 7.75C0.353841 7.75 0.280599 7.71908 0.21875 7.65723C0.156901 7.59538 0.125977 7.52214 0.125977 7.4375Z"
+                                                                        fill="black"
+                                                                        fillOpacity="0.6063"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className="flex justify-center items-center mt-10">
+                                                <div className="flex items-center justify-center">
+                                                    <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
+                                                    <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
+                                                    <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
+                                                    <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
+                                                    <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
+                                                    <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
+                                                </div>
+                                            </div>
+                                            <div className="flex justify-center items-center mt-7">
+                                                <div className="flex items-center justify-center">
+                                                    <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
+                                                    <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
+                                                    <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
+                                                    <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
+                                                    <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
+                                                    <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
+                                                </div>
+                                            </div>
+                                            <div className="flex justify-center items-center mt-7">
+                                                <div className="flex items-center justify-center">
+                                                    <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
+                                                    <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
+                                                    <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
+                                                    <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
+                                                    <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
+                                                    <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
+                                                </div>
+                                            </div>
+                                            <div className="w-[536px] h-[204px] mt-5">
                                                 <div className="flex justify-between">
-                                                    <div>
-                                                        <h1 className="text-black/90 dark:text-white/90 font-medium">Pinned</h1>
-                                                    </div>
+                                                    <h1 className="text-black/90 dark:text-white/90 font-medium">Recommanded</h1>
                                                     <div className="hidden">
                                                         <button className="bg-white px-3 py-1 rounded-lg border-2 border-gray-300">
                                                             <div className="inline-flex justify-start items-center">
-                                                                <span className="text-white/90 font-medium">All apps</span>
+                                                                <span className="text-white/90 font-medium">More</span>
                                                                 <div className="w-[10px] h-[22px] flex justify-center items-center ml-2">
                                                                     <svg className="w-3 h-3" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <path
@@ -106,84 +154,33 @@ export default function Home() {
                                                         </button>
                                                     </div>
                                                 </div>
-                                                <div className="flex justify-center items-center mt-10">
-                                                    <div className="flex items-center justify-center">
-                                                        <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
-                                                        <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
-                                                        <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
-                                                        <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
-                                                        <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
-                                                        <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
-                                                    </div>
+                                                <div className="flex flex-col justify-start items-start p-[2.95rem]">
+                                                    <p className="text-sm text-start text-black/90 dark:text-white/90">
+                                                        Plus vous utilisez votre appareil, plus nous vous montrerons de nouvelles applications ici.
+                                                    </p>
                                                 </div>
-                                                <div className="flex justify-center items-center mt-7">
-                                                    <div className="flex items-center justify-center">
-                                                        <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
-                                                        <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
-                                                        <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
-                                                        <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
-                                                        <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
-                                                        <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
-                                                    </div>
-                                                </div>
-                                                <div className="flex justify-center items-center mt-7">
-                                                    <div className="flex items-center justify-center">
-                                                        <MenuIcon icon={<Icons icon="spotify" className="w-8 h-8" onClick={() => null} action={""} />} title="Spotify" />
-                                                        <MenuIcon icon={<Icons icon="twitter" className="w-8 h-8" onClick={() => null} action={""} />} title="Twitter" />
-                                                        <MenuIcon icon={<Icons icon="settings" className="w-8 h-8" onClick={() => null} action={""} />} title="Settings" />
-                                                        <MenuIcon icon={<Icons icon="mail" className="w-8 h-8" onClick={() => null} action={""} />} title="Mail" />
-                                                        <MenuIcon icon={<Icons icon="xbox" className="w-8 h-8" onClick={() => null} action={""} />} title="Xbox" />
-                                                        <MenuIcon icon={<Icons icon="photos" className="w-8 h-8" onClick={() => null} action={""} />} title="Photos" />
-                                                    </div>
-                                                </div>
-                                                <div className="w-[536px] h-[204px] mt-5">
-                                                    <div className="flex justify-between">
-                                                        <h1 className="text-black/90 dark:text-white/90 font-medium">Recommanded</h1>
-                                                        <div className="hidden">
-                                                            <button className="bg-white px-3 py-1 rounded-lg border-2 border-gray-300">
-                                                                <div className="inline-flex justify-start items-center">
-                                                                    <span className="text-white/90 font-medium">More</span>
-                                                                    <div className="w-[10px] h-[22px] flex justify-center items-center ml-2">
-                                                                        <svg className="w-3 h-3" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <path
-                                                                                d="M0.125977 7.4375C0.125977 7.35286 0.156901 7.27962 0.21875 7.21777L3.43164 4L0.21875 0.782227C0.156901 0.720378 0.125977 0.647135 0.125977 0.5625C0.125977 0.477865 0.156901 0.404622 0.21875 0.342773C0.280599 0.280924 0.353841 0.25 0.438477 0.25C0.523112 0.25 0.596354 0.280924 0.658203 0.342773L4.0957 3.78027C4.15755 3.84212 4.18848 3.91536 4.18848 4C4.18848 4.08464 4.15755 4.15788 4.0957 4.21973L0.658203 7.65723C0.596354 7.71908 0.523112 7.75 0.438477 7.75C0.353841 7.75 0.280599 7.71908 0.21875 7.65723C0.156901 7.59538 0.125977 7.52214 0.125977 7.4375Z"
-                                                                                fill="black"
-                                                                                fillOpacity="0.6063"
-                                                                            />
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div className="flex flex-col justify-start items-start p-[2.95rem]">
-                                                        <p className="text-sm text-start text-black/90 dark:text-white/90">
-                                                            Plus vous utilisez votre appareil, plus nous vous montrerons de nouvelles applications ici.
-                                                        </p>
-                                                    </div>
 
-                                                    <div className="top-0 -ml-10">
-                                                        <div className="w-[642px] h-[62px] border-b-transparent border border-l-transparent border-r-transparent border-t-neutral-800/70 rounded-b-lg">
-                                                            <div className="flex justify-evenly	space-x-60 mt-0.5">
-                                                                <div className="w-[120px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-black/5 dark:hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                    <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" alt="me" />
-                                                                    <span className="text-black/90 dark:text-white/90 font-medium text-sm">Amine</span>
+                                                <div className="top-0 -ml-10">
+                                                    <div className="w-[642px] h-[62px] border-b-transparent border border-l-transparent border-r-transparent border-t-neutral-800/70 rounded-b-lg">
+                                                        <div className="flex justify-evenly	space-x-60 mt-0.5">
+                                                            <div className="w-[120px] h-[48px] inline-flex space-x-2 justify-center items-center mt-1 hover:bg-black/5 dark:hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
+                                                                <img src="https://avatars.githubusercontent.com/u/38817327?v=4" className="w-8 h-8 rounded-full" alt="me" />
+                                                                <span className="text-black/90 dark:text-white/90 font-medium text-sm">Amine</span>
+                                                            </div>
+                                                            <div className="flex justify-center items-center">
+                                                                <div
+                                                                    onClick={() => {
+                                                                        router.push("/shutdown");
+                                                                        setInterval(() => {
+                                                                            router.push("/");
+                                                                            localStorage.setItem("isLogged", "false");
+                                                                        }, 3000);
+                                                                    }}
+                                                                    className="w-10 h-10 flex justify-center items-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
+                                                                    <Icons icon="poweroff" className="w-5 h-5 text-black dark:text-white" onClick={() => null} action={""} />
                                                                 </div>
-                                                                <div className="flex justify-center items-center">
-                                                                    <div
-                                                                        onClick={() => {
-                                                                            router.push("/shutdown");
-                                                                            setInterval(() => {
-                                                                                router.push("/");
-                                                                                localStorage.setItem("isLogged", "false");
-                                                                            }, 3000);
-                                                                        }}
-                                                                        className="w-10 h-10 flex justify-center items-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                        <Icons icon="poweroff" className="w-5 h-5 text-black dark:text-white" onClick={() => null} action={""} />
-                                                                    </div>
-                                                                    <div className="w-10 h-10 flex justify-center items-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
-                                                                        <Icons icon="setting" className="w-5 h-5 text-black dark:text-white" onClick={() => null} action={""} />
-                                                                    </div>
+                                                                <div className="w-10 h-10 flex justify-center items-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors ease-in-out duration-150 rounded-md">
+                                                                    <Icons icon="setting" className="w-5 h-5 text-black dark:text-white" onClick={() => null} action={""} />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -193,7 +190,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                            </>
+                            </div>
                         </Transition>
                         <Calendar open={openCalendar} openCalendar={openViewCalendar} onClick={() => (openViewCalendar ? setOpenViewCalendar(false) : setOpenViewCalendar(true))} />
                         <Panel open={openPanel} onClick={() => (openPanel ? setOpenPanel(false) : setOpenPanel(true))} />
@@ -328,8 +325,6 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-
-
                 </ContextMenu.Root>
             </div>
         </>

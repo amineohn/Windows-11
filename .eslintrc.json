@@ -9,6 +9,7 @@
         "@next/next/no-img-element": "off",
         "react/no-unescaped-entities": "off",
         "jsx-a11y/alt-text": "off",
-        "no-unused-vars": "off"
+        "no-unused-vars": "off",
+        "@next/next/no-page-custom-font": "off"
     }
 }
